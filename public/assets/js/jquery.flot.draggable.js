@@ -46,6 +46,7 @@
                     }
                 });
                 eventHolder.bind("drag", function (pos) {
+                    if (!drag.item) return;
                     var axes = plot.getAxes();
                     var ax = axes.xaxis;
                     var ay = axes.yaxis;
@@ -101,6 +102,7 @@
                     plot.getPlaceholder().trigger('plotSeriesChange', [sidx, didx, retx, rety])
                 });
                 eventHolder.bind("dragend", function (e) {
+                    if (!drag.item) return;
                     var sidx = drag.item.seriesIndex;
                     var didx = drag.item.dataIndex;
                     var s = plot.getData()[sidx];
