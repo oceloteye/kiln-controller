@@ -1,0 +1,12 @@
+{
+  "name": "kiln-controller-frontend-tests",
+  "version": "0.0.0",
+  "description": "Minimal test harness for frontend JS behaviors",
+  "scripts": {
+    "test": "mocha --recursive Test"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
