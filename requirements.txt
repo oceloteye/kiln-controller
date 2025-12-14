@@ -5,11 +5,13 @@ gevent
 gevent-websocket
 websocket-client
 requests
+websockets
 
 # for folks running raspberry pis
 # we have no proof of anyone using another board yet, but when that 
 # happens, you might want to comment this out.
-RPi.GPIO
+## RPi.GPIO (Raspberry Pi only) - disabled on non-Pi platforms to avoid build errors
+# RPi.GPIO
 
 # List of all supported adafruit modules for thermocouples
 adafruit-circuitpython-max31855

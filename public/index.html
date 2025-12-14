@@ -58,13 +58,14 @@
      <button id="btn_edit" type="button" class="btn btn-default" onclick="enterEditMode()"><span class="glyphicon glyphicon-edit"></span></button>
      <button id="btn_new" type="button" class="btn btn-default" onclick="enterNewMode(selected_profile)"><span class="glyphicon glyphicon-plus"></span></button>
     </div>
-   <div id="btn_controls" class="pull-right" style="margin-top: 3px">
-    <div id="nav_start" class="btn-group" style="display:none">
-     <button type="button" class="btn btn-default" style="visibility: hidden;"  onclick="runTaskSimulation();">Simulate</button>
-     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#jobSummaryModal"><span class="glyphicon glyphicon-play"></span> Start</button>
-    </div>
-    <button id="nav_stop" type="button" class="btn btn-danger" onclick="abortTask()" style="display:none" ><span class="glyphicon glyphicon-stop"></span> Stop</button>
+  <div id="btn_controls" class="pull-right" style="margin-top: 3px">
+   <div id="nav_start" class="btn-group" style="display:none">
+    <button type="button" class="btn btn-default" style="visibility: hidden;"  onclick="runTaskSimulation();">Simulate</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#jobSummaryModal"><span class="glyphicon glyphicon-play"></span> Start</button>
    </div>
+   <button id="nav_stop" type="button" class="btn btn-danger" onclick="abortTask()" style="display:none" ><span class="glyphicon glyphicon-stop"></span> Stop</button>
+   <button id="btn_settings" type="button" class="btn btn-default" style="margin-left:8px" onclick="$('#settingsModal').modal('show')"><span class="glyphicon glyphicon-cog"></span></button>
+  </div>
     <div id="edit" style="display:none;">
      <div class="input-group">
       <span class="input-group-addon">Schedule Name</span>
@@ -87,6 +88,38 @@
      </div>
     </div>
    </div>
+
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+     <div class="modal-content">
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <h3 class="modal-title">Settings</h3>
+      </div>
+      <div class="modal-body">
+       <div class="form-group">
+        <label for="kwh_rate_input">Cost per kWh</label>
+        <input id="kwh_rate_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="kw_elements_input">Kilowatts when elements ON</label>
+        <input id="kw_elements_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="currency_type_input">Currency symbol</label>
+        <input id="currency_type_input" type="text" class="form-control" />
+       </div>
+      </div>
+      <div class="modal-footer">
+       <div class="btn-group" style="width: 100%">
+        <button type="button" class="btn btn-default" style="width: 50%" data-dismiss="modal">Cancel</button>
+        <button id="settings_save_btn" type="button" class="btn btn-primary" style="width: 50%" onclick="saveSettings()">Save</button>
+       </div>
+      </div>
+     </div>
+    </div>
+  </div>
    <div class="panel-body">
     <div id="graph_container" class="graph"></div>
    </div>

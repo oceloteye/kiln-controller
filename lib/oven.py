@@ -479,6 +479,7 @@ class Oven(threading.Thread):
             'heat_rate': self.heat_rate,
             'totaltime': self.totaltime,
             'kwh_rate': config.kwh_rate,
+            'kw_elements': getattr(config, 'kw_elements', None),
             'currency_type': config.currency_type,
             'profile': self.profile.name if self.profile else None,
             'pidstats': self.pid.pidstats,
