@@ -1,7 +1,12 @@
 import logging
 import os
-from digitalio import DigitalInOut
-import busio
+try:
+    from digitalio import DigitalInOut
+    import busio
+except Exception:
+    # Not running on hardware that provides CircuitPython/Blika libraries
+    DigitalInOut = None
+    busio = None
 
 ########################################################################
 #
@@ -90,7 +95,7 @@ try:
     spi_mosi  = board.D10    #spi Microcomputer Out Serial In (not connected) 
     gpio_heat = board.D23    #output that controls relay
     gpio_heat_invert = False #invert the output state
-except (NotImplementedError,AttributeError):
+except Exception:
     print("not running on blinka recognized board, probably a simulation")
 
 #######################################
@@ -101,9 +106,12 @@ except (NotImplementedError,AttributeError):
 #   max31856 - supports many thermocouples
 max31855 = 0
 max31856 = 1
-# uncomment these two lines if using MAX-31856
-import adafruit_max31856
-thermocouple_type = adafruit_max31856.ThermocoupleType.K
+try:
+    # uncomment these two lines if using MAX-31856
+    import adafruit_max31856
+    thermocouple_type = adafruit_max31856.ThermocoupleType.K
+except Exception:
+    thermocouple_type = None
 
 # here are the possible max-31856 thermocouple types
 #   ThermocoupleType.B

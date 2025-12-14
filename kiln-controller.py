@@ -21,6 +21,30 @@ logging.basicConfig(level=config.log_level, format=config.log_format)
 log = logging.getLogger("kiln-controller")
 log.info("Starting kiln controller")
 
+# Load persisted settings if present (settings.json next to this script)
+try:
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    settings_path = os.path.join(script_dir, 'settings.json')
+    log.info('Looking for settings.json at %s', settings_path)
+    if os.path.exists(settings_path):
+        try:
+            size = os.path.getsize(settings_path)
+            log.info('Found settings.json size=%d', size)
+        except Exception:
+            pass
+        with open(settings_path, 'r', encoding='utf-8-sig') as sf:
+            _s = json.load(sf)
+        for _k, _v in _s.items():
+            try:
+                setattr(config, _k, _v)
+            except Exception:
+                pass
+        log.info("Loaded settings from %s", settings_path)
+    else:
+        log.info('settings.json not present')
+except Exception:
+    log.exception("Failed loading settings.json")
+
 script_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, script_dir + '/lib/')
 profile_path = config.kiln_profiles_directory
@@ -236,7 +260,31 @@ def handle_config():
     while True:
         try:
             message = wsock.receive()
-            wsock.send(get_config())
+            if not message:
+                break
+            try:
+                msgdict = json.loads(message)
+            except:
+                msgdict = {}
+
+            # Allow clients to set persisted settings via {cmd:'SET', data:{...}}
+            if msgdict.get('cmd') == 'SET':
+                data = msgdict.get('data', {})
+                for k, v in data.items():
+                    try:
+                        setattr(config, k, v)
+                    except Exception:
+                        pass
+                # persist only the provided keys
+                try:
+                    with open(os.path.join(script_dir, 'settings.json'), 'w') as sf:
+                        json.dump(data, sf)
+                    log.info('Wrote settings.json')
+                except Exception:
+                    log.exception('Failed writing settings.json')
+                wsock.send(get_config())
+            else:
+                wsock.send(get_config())
         except WebSocketError:
             break
         time.sleep(1)
@@ -338,7 +386,8 @@ def get_config():
         "time_scale_slope": config.time_scale_slope,
         "time_scale_profile": config.time_scale_profile,
         "kwh_rate": config.kwh_rate,
-        "currency_type": config.currency_type})    
+        "kw_elements": getattr(config, 'kw_elements', None),
+        "currency_type": config.currency_type})
 
 def main():
     ip = "0.0.0.0"

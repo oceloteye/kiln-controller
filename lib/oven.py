@@ -1,13 +1,18 @@
-import threading
+﻿import threading
 import time
 import datetime
 import logging
 import json
 import config
 import os
-import digitalio
-import busio
-import adafruit_bitbangio as bitbangio
+try:
+    import digitalio
+    import busio
+    import adafruit_bitbangio as bitbangio
+except Exception:
+    digitalio = None
+    busio = None
+    bitbangio = None
 import statistics
 
 log = logging.getLogger(__name__)
@@ -479,6 +484,7 @@ class Oven(threading.Thread):
             'heat_rate': self.heat_rate,
             'totaltime': self.totaltime,
             'kwh_rate': config.kwh_rate,
+            'kw_elements': getattr(config, 'kw_elements', None),
             'currency_type': config.currency_type,
             'profile': self.profile.name if self.profile else None,
             'pidstats': self.pid.pidstats,
@@ -733,7 +739,7 @@ class Profile():
     def __init__(self, json_data):
         obj = json.loads(json_data)
         self.name = obj["name"]
-        self.data = sorted(obj["data"])
+        self.data = sorted(obj["data"]) 
 
     def get_duration(self):
         return max([t for (t, x) in self.data])
