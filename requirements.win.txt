@@ -15,3 +15,5 @@ adafruit-circuitpython-max31856
 
 # for folks using sw spi (bit banging)
 adafruit-circuitpython-bitbangio
+
+selenium
