@@ -13,6 +13,7 @@ var time_scale_long = "Seconds";
 var temp_scale_display = "C";
 var kwh_rate = 0.26;
 var currency_type = "EUR";
+var kw_elements = 9.46;
 
 var protocol = 'ws:';
 if (window.location.protocol == 'https:') {
@@ -22,7 +23,34 @@ var host = "" + protocol + "//" + window.location.hostname + ":" + window.locati
 var ws_status = new WebSocket(host+"/status");
 var ws_control = new WebSocket(host+"/control");
 var ws_config = new WebSocket(host+"/config");
+// expose a friendly alias for console debugging (`socket_config`) and other scripts
+try { window.socket_config = ws_config; } catch(e) {}
 var ws_storage = new WebSocket(host+"/storage");
+var expectingConfigAck = false;
+var configAckTimer = null;
+
+// Defensive fallback: if Select2 plugin failed to load for any reason,
+// provide a no-op implementation so the rest of the script doesn't throw
+// and prevent `saveSettings` and other functions from being defined.
+try {
+    if (typeof $ !== 'undefined' && (!$.fn || typeof $.fn.select2 === 'undefined')) {
+        $.fn = $.fn || {};
+        $.fn.select2 = function() { return this; };
+    }
+} catch (e) { /* ignore */ }
+
+// Expose a small instrumentation helper to log incoming config messages
+try {
+    window.instrumentConfigSocket = function() {
+        if (typeof ws_config === 'undefined') { console.log('ws_config not defined'); return; }
+        var orig = ws_config.onmessage;
+        ws_config.onmessage = function(e) {
+            console.log('INSTRUMENT config rx', e.data);
+            try { if (typeof orig === 'function') orig.call(ws_config, e); } catch (err) { console.error(err); }
+        };
+        console.log('instrumentConfigSocket installed');
+    };
+} catch (e) { /* ignore */ }
 
 
 if(window.webkitRequestAnimationFrame) window.requestAnimationFrame = window.webkitRequestAnimationFrame;
@@ -51,7 +79,7 @@ function updateProfile(id)
     selected_profile = id;
     selected_profile_name = profiles[id].name;
     var job_seconds = profiles[id].data.length === 0 ? 0 : parseInt(profiles[id].data[profiles[id].data.length-1][0]);
-    var kwh = (3850*job_seconds/3600/1000).toFixed(2);
+    var kwh = (kw_elements * job_seconds / 3600).toFixed(2);
     var cost =  (kwh*kwh_rate).toFixed(2);
     var job_time = new Date(job_seconds * 1000).toISOString().substr(11, 8);
     $('#sel_prof').html(profiles[id].name);
@@ -80,7 +108,13 @@ function deleteProfile()
     $('#btn_controls').show();
     $('#status').slideDown();
     $('#profile_table').slideUp();
-    $('#e2').select2('val', 0);
+    try {
+        if ($.fn && $.fn.select2) {
+            $('#e2').select2('val', 0);
+        } else {
+            $('#e2').val(0);
+        }
+    } catch (e) { $('#e2').val(0); }
     graph.profile.points.show = false;
     graph.profile.draggable = false;
     graph.plot = $.plot("#graph_container", [ graph.profile, graph.live ], getOptions());
@@ -512,7 +546,13 @@ $(document).ready(function()
                     $.each(profiles,  function(i,v) {
                         if(v.name == x.profile.name) {
                             updateProfile(i);
-                            $('#e2').select2('val', i);
+                            try {
+                                if ($.fn && $.fn.select2) {
+                                    $('#e2').select2('val', i);
+                                } else {
+                                    $('#e2').val(i);
+                                }
+                            } catch (e) { $('#e2').val(i); }
                         }
                     });
                 }
@@ -605,7 +645,19 @@ $(document).ready(function()
             time_scale_slope = x.time_scale_slope;
             time_scale_profile = x.time_scale_profile;
             kwh_rate = x.kwh_rate;
+            kw_elements = x.kw_elements || kw_elements;
             currency_type = x.currency_type;
+
+            // populate settings modal if present
+            if (typeof $('#kwh_rate_input') !== 'undefined') {
+                $('#kwh_rate_input').val(kwh_rate);
+            }
+            if (typeof $('#kw_elements_input') !== 'undefined') {
+                $('#kw_elements_input').val(kw_elements);
+            }
+            if (typeof $('#currency_type_input') !== 'undefined') {
+                $('#currency_type_input').val(currency_type);
+            }
 
             if (temp_scale == "c") {temp_scale_display = "C";} else {temp_scale_display = "F";}
 
@@ -626,7 +678,103 @@ $(document).ready(function()
                     break;
             }
 
+            // If we were waiting for a config ack, treat this incoming config as confirmation
+            if (expectingConfigAck) {
+                expectingConfigAck = false;
+                if (configAckTimer) { clearTimeout(configAckTimer); configAckTimer = null; }
+                try { $('#settingsModal').modal('hide'); } catch (e) {}
+                $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
+            }
+
+            // If the settings modal is open (user may have used a different debug socket
+            // or another client), still close it and notify success so the UI stays in sync.
+            try {
+                if ($('#settingsModal').is(':visible')) {
+                    try { $('#settingsModal').modal('hide'); } catch (e) {}
+                    $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
+                }
+            } catch (e) { /* ignore DOM/query failures */ }
+
         }
+
+// Save settings from modal and send to server via ws_config
+function saveSettings()
+{
+    var data = {};
+    var kr = $('#kwh_rate_input').val();
+    var kw = $('#kw_elements_input').val();
+    var cur = $('#currency_type_input').val();
+
+    if(kr) data.kwh_rate = parseFloat(kr);
+    if(kw) data.kw_elements = parseFloat(kw);
+    if(cur) data.currency_type = cur;
+
+    var msg = { cmd: 'SET', data: data };
+    var payload = JSON.stringify(msg);
+
+    function notifyFail() {
+        try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
+        $.bootstrapGrowl('Failed to save settings', { type: 'danger', delay: 2000 });
+    }
+
+    function startAckTimer() {
+        if (configAckTimer) { clearTimeout(configAckTimer); configAckTimer = null; }
+        expectingConfigAck = true;
+        configAckTimer = setTimeout(function() {
+            expectingConfigAck = false;
+            configAckTimer = null;
+            notifyFail();
+        }, 4000);
+    }
+
+    // disable Save button while waiting for server
+    try { $('#settings_save_btn').prop('disabled', true).text('Saving...'); } catch (e) {}
+
+    // If ws_config is open, send and wait for server ack (server echoes config)
+    if (typeof ws_config !== 'undefined' && ws_config.readyState === WebSocket.OPEN) {
+        try {
+            ws_config.send(payload);
+            startAckTimer();
+            return;
+        } catch (e) {
+            notifyFail();
+            return;
+        }
+    }
+
+    // Otherwise open a temporary websocket to send the SET and wait for the response on it
+    try {
+        var tmp = new WebSocket(host + '/config');
+        var tmpTimer = setTimeout(function() {
+            try { tmp.close(); } catch(e) {}
+            notifyFail();
+        }, 4000);
+
+        tmp.onopen = function() {
+            try {
+                tmp.send(payload);
+            } catch (e) {
+                clearTimeout(tmpTimer);
+                try { tmp.close(); } catch(e) {}
+                notifyFail();
+            }
+        };
+        tmp.onmessage = function(e) {
+            clearTimeout(tmpTimer);
+            try { tmp.close(); } catch(e) {}
+            try { $('#settingsModal').modal('hide'); } catch(e) {}
+            try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
+            $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
+        };
+        tmp.onerror = function() {
+            clearTimeout(tmpTimer);
+            try { tmp.close(); } catch(e) {}
+            notifyFail();
+        };
+    } catch (e) {
+        notifyFail();
+    }
+}
 
         // Control Socket ////////////////////////////////
 
@@ -703,19 +851,27 @@ $(document).ready(function()
                 if (profile.name == selected_profile_name)
                 {
                     selected_profile = i;
-                    $('#e2').select2('val', i);
+                    try {
+                        if ($.fn && $.fn.select2) {
+                            $('#e2').select2('val', i);
+                        } else {
+                            $('#e2').val(i);
+                        }
+                    } catch (e) { $('#e2').val(i); }
                     updateProfile(i);
                 }
             }
         };
 
 
-        $("#e2").select2(
-        {
-            placeholder: "Select Profile",
-            allowClear: true,
-            minimumResultsForSearch: -1
-        });
+        if ($.fn && $.fn.select2) {
+            $("#e2").select2(
+            {
+                placeholder: "Select Profile",
+                allowClear: true,
+                minimumResultsForSearch: -1
+            });
+        }
 
 
         $("#e2").on("change", function(e)

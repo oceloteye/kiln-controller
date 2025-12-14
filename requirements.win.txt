@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿setuptools
 greenlet
 bottle
@@ -15,3 +16,24 @@ adafruit-circuitpython-max31856
 
 # for folks using sw spi (bit banging)
 adafruit-circuitpython-bitbangio
+=======
+setuptools
+greenlet
+bottle
+gevent
+gevent-websocket
+websocket-client
+requests
+websockets
+
+# For Windows/dev machines we exclude RPi.GPIO (Raspberry Pi only)
+
+# List of all supported adafruit modules for thermocouples
+adafruit-circuitpython-max31855
+adafruit-circuitpython-max31856
+
+# for folks using sw spi (bit banging)
+adafruit-circuitpython-bitbangio
+
+selenium
+>>>>>>> 475aba8a1e8dffe86d7307c46d13e0605d20e07c

@@ -7,6 +7,7 @@ import logging
 import json
 
 import bottle
+from bottle import abort
 import gevent
 import geventwebsocket
 #from bottle import post, get
@@ -16,6 +17,25 @@ from geventwebsocket import WebSocketError
 
 # try/except removed here on purpose so folks can see why things break
 import config
+
+# Load persisted settings (if any) to override defaults in config.py
+def _load_persisted_settings():
+    try:
+        settings_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'settings.json'))
+        if os.path.exists(settings_path):
+            with open(settings_path, 'r') as sf:
+                s = json.load(sf)
+                if 'kwh_rate' in s:
+                    config.kwh_rate = float(s['kwh_rate'])
+                if 'kw_elements' in s:
+                    config.kw_elements = float(s['kw_elements'])
+                if 'currency_type' in s:
+                    config.currency_type = str(s['currency_type'])
+                log.info('Loaded persisted settings from %s' % settings_path)
+    except Exception as e:
+        log.error('Failed to load persisted settings: %s' % e)
+
+_load_persisted_settings()
 
 logging.basicConfig(level=config.log_level, format=config.log_format)
 log = logging.getLogger("kiln-controller")
@@ -260,6 +280,7 @@ def handle_config():
     while True:
         try:
             message = wsock.receive()
+<<<<<<< HEAD
             if not message:
                 break
             try:
@@ -284,6 +305,46 @@ def handle_config():
                     log.exception('Failed writing settings.json')
                 wsock.send(get_config())
             else:
+=======
+            # Expect either a simple 'GET' or a JSON command
+            try:
+                j = json.loads(message)
+            except Exception:
+                j = None
+
+            # If client requests GET, reply with current config
+            if message == 'GET' or (j and j.get('cmd') == 'GET'):
+                wsock.send(get_config())
+            # Allow clients to SET config values (persisted in settings.json)
+            elif j and j.get('cmd') == 'SET':
+                data = j.get('data', {})
+                # Update runtime config values
+                try:
+                    if 'kwh_rate' in data:
+                        config.kwh_rate = float(data['kwh_rate'])
+                    if 'kw_elements' in data:
+                        config.kw_elements = float(data['kw_elements'])
+                    if 'currency_type' in data:
+                        config.currency_type = str(data['currency_type'])
+                except Exception as e:
+                    log.error("Failed to apply config settings: %s" % e)
+
+                # persist to settings.json
+                try:
+                    settings_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'settings.json'))
+                    with open(settings_path, 'w') as sf:
+                        json.dump({
+                            'kwh_rate': config.kwh_rate,
+                            'kw_elements': config.kw_elements,
+                            'currency_type': config.currency_type
+                        }, sf)
+                except Exception as e:
+                    log.error("Failed to write settings.json: %s" % e)
+
+                wsock.send(get_config())
+            else:
+                # fallback: always send current config
+>>>>>>> 475aba8a1e8dffe86d7307c46d13e0605d20e07c
                 wsock.send(get_config())
         except WebSocketError:
             break
@@ -387,7 +448,11 @@ def get_config():
         "time_scale_profile": config.time_scale_profile,
         "kwh_rate": config.kwh_rate,
         "kw_elements": getattr(config, 'kw_elements', None),
+<<<<<<< HEAD
         "currency_type": config.currency_type})
+=======
+        "currency_type": config.currency_type})    
+>>>>>>> 475aba8a1e8dffe86d7307c46d13e0605d20e07c
 
 def main():
     ip = "0.0.0.0"
