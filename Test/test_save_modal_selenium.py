@@ -1,10 +1,10 @@
+import os
 import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 @pytest.mark.usefixtures('http_server')
@@ -13,12 +13,25 @@ def test_save_modal_closes(http_server):
     any connection to '/config' is redirected to the mock `config_server`.
     Then open the settings modal, trigger save, and assert the modal closes.
     """
-    opts = Options()
-    opts.add_argument('--headless=new')
-    opts.add_argument('--no-sandbox')
-    opts.add_argument('--disable-gpu')
+    browser = os.getenv('BROWSER', 'chrome').lower()
 
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+    if browser == 'firefox':
+        from selenium.webdriver.firefox.options import Options as FirefoxOptions
+        from selenium.webdriver.firefox.service import Service as FirefoxService
+
+        opts = FirefoxOptions()
+        opts.headless = True
+        driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=opts)
+    else:
+        from selenium.webdriver.chrome.options import Options
+        from selenium.webdriver.chrome.service import Service
+
+        opts = Options()
+        opts.add_argument('--headless=new')
+        opts.add_argument('--no-sandbox')
+        opts.add_argument('--disable-gpu')
+
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
     try:
         # page served with public/ as the document root; load index.html
         driver.get(http_server + '/index.html')
