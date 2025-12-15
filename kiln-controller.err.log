@@ -1,0 +1,473 @@
+2025-12-13 21:40:20,395 INFO kiln-controller: Starting kiln controller
+2025-12-13 21:40:20,398 INFO kiln-controller: Looking for settings.json at C:\Users\ocelo\kiln-controller\settings.json
+2025-12-13 21:40:20,398 INFO kiln-controller: Found settings.json size=74
+2025-12-13 21:40:20,420 INFO kiln-controller: Loaded settings from C:\Users\ocelo\kiln-controller\settings.json
+2025-12-13 21:40:20,429 INFO kiln-controller: this is a simulation
+2025-12-13 21:40:20,430 INFO oven: board: simulated
+2025-12-13 21:40:20,431 INFO oven: SimulatedOven started
+2025-12-13 21:40:20,432 INFO oven.dupfree: automatic restart not possible. state file does not exist or is too old.
+2025-12-13 21:40:20,432 INFO oven: ovenwatcher set in oven class
+2025-12-13 21:40:20,433 INFO kiln-controller: listening on 0.0.0.0:8081
+2025-12-13 21:45:04,312 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/index.html HTTP/1.1" 200 8732 0.064958
+2025-12-13 21:45:04,415 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 200 93361 0.063251
+2025-12-13 21:45:04,454 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 200 13475 0.037162
+2025-12-13 21:45:04,535 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 200 125101 0.080208
+2025-12-13 21:45:04,552 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 200 103140 0.015549
+2025-12-13 21:45:04,568 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 200 17948 0.014556
+2025-12-13 21:45:04,585 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 200 21893 0.015269
+2025-12-13 21:45:04,601 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 200 5223 0.015273
+2025-12-13 21:45:04,633 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 200 3442 0.030747
+2025-12-13 21:45:04,660 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 200 5736 0.025694
+2025-12-13 21:45:04,681 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 200 15565 0.019547
+2025-12-13 21:45:04,720 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 200 28004 0.037655
+2025-12-13 21:45:04,812 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 200 61012 0.091415
+2025-12-13 21:45:04,836 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 200 1390 0.023005
+2025-12-13 21:45:04,867 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 200 22696 0.028993
+2025-12-13 21:45:04,890 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 200 748 0.008997
+2025-12-13 21:45:04,937 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 200 11455 0.010099
+2025-12-13 21:45:04,947 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:04] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 200 17551 0.009575
+2025-12-13 21:45:05,094 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:05] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23527 0.009059
+2025-12-13 21:45:05,104 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:05] "GET /picoreflow/assets/css/select2.png HTTP/1.1" 200 831 0.009043
+2025-12-13 21:45:05,155 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:45:05] "GET /favicon.ico HTTP/1.1" 404 872 0.002006
+2025-12-13 21:45:05,191 INFO kiln-controller: websocket (status) opened
+2025-12-13 21:45:05,193 INFO kiln-controller: websocket (control) opened
+2025-12-13 21:45:05,205 INFO kiln-controller: websocket (config) opened
+2025-12-13 21:45:06,208 INFO kiln-controller: websocket (storage) opened
+2025-12-13 21:45:06,210 INFO kiln-controller: GET command received
+2025-12-13 21:57:03,186 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681022863 HTTP/1.1" 200 8732 0.000999
+2025-12-13 21:57:03,200 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 200 93361 0.001002
+2025-12-13 21:57:03,205 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 200 103140 0.001001
+2025-12-13 21:57:03,208 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 200 17948 0.001004
+2025-12-13 21:57:03,211 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 200 5223 0.002260
+2025-12-13 21:57:03,213 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 200 21893 0.001000
+2025-12-13 21:57:03,215 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 200 15565 0.000999
+2025-12-13 21:57:03,218 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 200 13475 0.001999
+2025-12-13 21:57:03,221 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 200 125101 0.001998
+2025-12-13 21:57:03,223 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 200 3442 0.001000
+2025-12-13 21:57:03,226 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 200 5736 0.000994
+2025-12-13 21:57:03,229 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 200 28004 0.001203
+2025-12-13 21:57:03,231 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 200 1390 0.001105
+2025-12-13 21:57:03,234 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 200 61012 0.001281
+2025-12-13 21:57:03,237 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 200 22696 0.001610
+2025-12-13 21:57:03,249 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 200 748 0.001174
+2025-12-13 21:57:03,264 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 200 11455 0.001093
+2025-12-13 21:57:03,267 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 200 17551 0.001999
+2025-12-13 21:57:03,269 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23527 0.000999
+2025-12-13 21:57:03,274 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:57:03] "GET /picoreflow/assets/css/select2.png HTTP/1.1" 200 831 0.001996
+2025-12-13 21:57:03,570 INFO kiln-controller: websocket (status) opened
+2025-12-13 21:57:03,576 INFO kiln-controller: websocket (control) opened
+2025-12-13 21:57:03,589 INFO kiln-controller: websocket (config) opened
+2025-12-13 21:57:04,594 INFO kiln-controller: websocket (storage) opened
+2025-12-13 21:57:04,595 INFO kiln-controller: GET command received
+2025-12-13 21:57:33,193 INFO kiln-controller: GET command received
+2025-12-13 21:58:01,567 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 21:58:01] "GET /picoreflow/assets/css/select2-spinner.gif HTTP/1.1" 200 2068 0.014003
+2025-12-13 22:00:04,440 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:00:04] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681204435 HTTP/1.1" 200 8732 0.001041
+2025-12-13 22:00:04,467 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:00:04,746 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126CF40>
+2025-12-13 22:00:05,468 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:00:05,471 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:00:05,472 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:00:05,473 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:00:05,487 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:00:05,488 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:00:05,513 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:00:06,516 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:00:06,517 INFO kiln-controller: GET command received
+2025-12-13 22:00:37,812 INFO kiln-controller: GET command received
+2025-12-13 22:02:13,274 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681333242 HTTP/1.1" 200 18782 0.029238
+2025-12-13 22:02:13,284 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 304 114 0.001030
+2025-12-13 22:02:13,287 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 304 114 0.001001
+2025-12-13 22:02:13,291 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 304 114 0.001086
+2025-12-13 22:02:13,293 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 304 114 0.000999
+2025-12-13 22:02:13,295 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 304 114 0.001081
+2025-12-13 22:02:13,297 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 304 114 0.001400
+2025-12-13 22:02:13,298 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:02:13,300 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 304 114 0.001096
+2025-12-13 22:02:13,303 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 304 114 0.001430
+2025-12-13 22:02:13,307 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 304 114 0.001002
+2025-12-13 22:02:13,310 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 304 114 0.001001
+2025-12-13 22:02:13,314 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 304 114 0.001003
+2025-12-13 22:02:13,317 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 304 114 0.001004
+2025-12-13 22:02:13,320 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:02:13] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 304 114 0.000998
+2025-12-13 22:02:13,336 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:02:14,337 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:02:14,339 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:02:14,341 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:02:14,342 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:02:14,356 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:02:14,357 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:02:14,370 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:02:14,390 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:02:14,423 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:02:14,425 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:02:14,440 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:02:14,788 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F851216800>
+2025-12-13 22:02:15,443 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:02:15,446 INFO kiln-controller: GET command received
+2025-12-13 22:07:09,876 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:09] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681629868 HTTP/1.1" 200 18782 0.002009
+2025-12-13 22:07:09,879 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:07:10,881 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:07:10,883 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:07:10,884 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:07:10,885 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:07:10,886 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:07:10,887 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126D540>
+2025-12-13 22:07:11,887 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:07:11,888 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:07:11,889 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:07:11,890 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:07:11,892 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 304 114 0.000999
+2025-12-13 22:07:11,894 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 304 114 0.000980
+2025-12-13 22:07:11,896 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 304 114 0.001208
+2025-12-13 22:07:11,897 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:07:11,899 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 304 114 0.001002
+2025-12-13 22:07:11,900 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:07:11,902 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 304 114 0.001345
+2025-12-13 22:07:11,903 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:07:11,905 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 304 114 0.001002
+2025-12-13 22:07:11,907 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 304 114 0.000000
+2025-12-13 22:07:11,908 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 304 114 0.000997
+2025-12-13 22:07:11,910 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 304 114 0.000996
+2025-12-13 22:07:11,912 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 304 114 0.001031
+2025-12-13 22:07:11,913 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:07:11] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:07:12,226 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:07:12,238 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:07:12,253 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:07:12,269 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:07:12,287 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:07:12,301 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:07:12,316 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:07:12,888 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126D600>
+2025-12-13 22:07:13,319 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:07:13,321 INFO kiln-controller: GET command received
+2025-12-13 22:08:04,204 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:08:04] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681684198 HTTP/1.1" 200 18782 0.001999
+2025-12-13 22:08:04,207 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:08:04,907 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126DFC0>
+2025-12-13 22:08:05,209 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:08:05,210 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:08:05,211 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:08:05,211 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:08:05,212 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:08:06,213 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:08:06,214 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:08:06,217 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:08:06,219 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:08:06,221 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:08:06,236 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:08:06,252 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:08:06,266 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:08:06,284 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:08:06,300 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:08:06,314 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:08:06,909 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126E800>
+2025-12-13 22:08:07,317 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:08:07,320 INFO kiln-controller: GET command received
+2025-12-13 22:11:31,999 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:11:31] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765681891994 HTTP/1.1" 200 18782 0.000999
+2025-12-13 22:11:32,009 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:11:32,978 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F8512172E0>
+2025-12-13 22:11:33,011 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:11:33,012 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:11:33,013 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:11:33,014 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:11:33,015 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:11:34,017 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:11:34,019 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:11:34,020 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:11:34,020 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:11:34,023 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:11:34,040 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:11:34,056 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:11:34,071 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:11:34,090 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:11:34,103 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:11:34,118 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:11:34,981 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126E5C0>
+2025-12-13 22:11:35,120 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:11:35,122 INFO kiln-controller: GET command received
+2025-12-13 22:15:36,027 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:36] "GET /picoreflow/index.html?id=1e890e65-e67f-4a94-a0a1-37eb927f6b9c&vscodeBrowserReqId=1765682136022 HTTP/1.1" 200 18782 0.000999
+2025-12-13 22:15:36,039 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:15:37,041 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:15:37,043 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:15:37,044 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:15:37,045 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:15:37,046 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:15:37,063 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F851217B80>
+2025-12-13 22:15:38,048 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:15:38,050 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:15:38,051 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:15:38,052 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:15:38,054 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 304 114 0.001000
+2025-12-13 22:15:38,056 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 304 114 0.001007
+2025-12-13 22:15:38,058 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 304 114 0.001000
+2025-12-13 22:15:38,059 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 304 114 0.000000
+2025-12-13 22:15:38,061 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 304 114 0.000000
+2025-12-13 22:15:38,063 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 304 114 0.001043
+2025-12-13 22:15:38,066 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 304 114 0.000999
+2025-12-13 22:15:38,067 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 304 114 0.001480
+2025-12-13 22:15:38,068 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 304 114 0.001390
+2025-12-13 22:15:38,070 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 304 114 0.001469
+2025-12-13 22:15:38,072 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 304 114 0.001003
+2025-12-13 22:15:38,073 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 304 114 0.001261
+2025-12-13 22:15:38,075 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 304 114 0.001001
+2025-12-13 22:15:38,077 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:15:38] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 304 114 0.000997
+2025-12-13 22:15:38,391 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:15:38,403 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:15:38,418 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:15:38,434 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:15:38,451 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:15:38,465 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:15:38,479 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:15:39,065 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126EB00>
+2025-12-13 22:15:39,481 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:15:39,483 INFO kiln-controller: GET command received
+2025-12-13 22:16:07,194 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/index.html HTTP/1.1" 200 18782 0.001998
+2025-12-13 22:16:07,238 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 304 114 0.000998
+2025-12-13 22:16:07,250 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 304 114 0.001000
+2025-12-13 22:16:07,252 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 304 114 0.001003
+2025-12-13 22:16:07,255 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 304 114 0.001002
+2025-12-13 22:16:07,257 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 304 114 0.000999
+2025-12-13 22:16:07,259 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 304 114 0.001170
+2025-12-13 22:16:07,261 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 304 114 0.000999
+2025-12-13 22:16:07,263 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 304 114 0.001000
+2025-12-13 22:16:07,265 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 304 114 0.001004
+2025-12-13 22:16:07,268 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 304 114 0.001003
+2025-12-13 22:16:07,270 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 304 114 0.001142
+2025-12-13 22:16:07,272 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 304 114 0.001462
+2025-12-13 22:16:07,274 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 304 114 0.000991
+2025-12-13 22:16:07,277 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 304 114 0.001999
+2025-12-13 22:16:07,301 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 304 114 0.001023
+2025-12-13 22:16:07,315 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 304 114 0.001031
+2025-12-13 22:16:07,317 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 114 0.000000
+2025-12-13 22:16:07,321 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:07] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 304 114 0.002037
+2025-12-13 22:16:07,614 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:16:07,627 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:16:07,641 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:16:07,658 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:16:07,674 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:16:07,689 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:16:07,704 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:16:08,709 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:16:08,712 INFO kiln-controller: GET command received
+2025-12-13 22:16:13,019 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:16:13] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.000000
+2025-12-13 22:19:46,167 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:19:46] "GET /picoreflow/index.html HTTP/1.1" 200 18782 0.023946
+2025-12-13 22:19:46,177 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:19:47,160 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126F2E0>
+2025-12-13 22:19:47,179 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:19:47,179 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:19:47,181 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:19:47,181 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:19:47,182 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:19:48,184 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:19:48,184 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:19:48,186 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:19:48,187 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:19:48,188 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:19:48] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.000000
+2025-12-13 22:19:48,192 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:19:48,212 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:19:48,228 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:19:48,244 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:19:48,262 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:19:48,275 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:19:48,290 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:19:49,162 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126FA00>
+2025-12-13 22:19:49,293 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:19:49,294 INFO kiln-controller: GET command received
+2025-12-13 22:19:50,298 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:19:55,346 INFO kiln-controller: Wrote settings.json
+2025-12-13 22:22:17,040 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:22:17] "GET /picoreflow/index.html HTTP/1.1" 304 114 0.001023
+2025-12-13 22:22:17,045 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:22:17,215 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126FF40>
+2025-12-13 22:22:18,047 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:22:18,048 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:22:18,050 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:22:18,050 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:22:18,051 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:22:18,052 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:22:19,054 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:22:19,056 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:22:19,058 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:22:19,059 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:22:19,061 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:22:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.001000
+2025-12-13 22:22:19,065 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:22:19,085 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:22:19,101 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:22:19,116 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:22:19,132 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:22:19,151 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:22:19,164 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:22:19,218 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126F760>
+2025-12-13 22:22:20,167 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:22:20,170 INFO kiln-controller: GET command received
+2025-12-13 22:27:18,483 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:18] "GET /picoreflow/index.html HTTP/1.1" 304 114 0.000998
+2025-12-13 22:27:18,488 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:27:19,335 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126FB20>
+2025-12-13 22:27:19,490 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:27:19,490 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:27:19,492 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:27:19,493 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:27:19,494 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:27:20,495 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:27:20,497 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:27:20,498 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:27:20,499 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:27:20,501 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.001004
+2025-12-13 22:27:20,503 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 304 114 0.000998
+2025-12-13 22:27:20,505 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 304 114 0.000998
+2025-12-13 22:27:20,507 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 304 114 0.001067
+2025-12-13 22:27:20,508 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 304 114 0.001378
+2025-12-13 22:27:20,510 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 304 114 0.000999
+2025-12-13 22:27:20,512 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:27:20,513 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 304 114 0.001001
+2025-12-13 22:27:20,516 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 304 114 0.000996
+2025-12-13 22:27:20,517 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 304 114 0.000000
+2025-12-13 22:27:20,520 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 304 114 0.001002
+2025-12-13 22:27:20,522 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 304 114 0.001000
+2025-12-13 22:27:20,524 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 304 114 0.000999
+2025-12-13 22:27:20,526 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 304 114 0.001007
+2025-12-13 22:27:20,528 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 304 114 0.001000
+2025-12-13 22:27:20,549 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 304 114 0.000996
+2025-12-13 22:27:20,558 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 304 114 0.001401
+2025-12-13 22:27:20,560 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 304 114 0.000000
+2025-12-13 22:27:20,562 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:27:20] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 114 0.001001
+2025-12-13 22:27:20,851 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:27:20,863 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:27:20,879 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:27:20,894 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:27:20,913 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:27:20,926 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:27:20,941 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:27:20,942 INFO kiln-controller: GET command received
+2025-12-13 22:27:21,338 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126FD00>
+2025-12-13 22:27:21,946 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:28:20,656 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:20] "GET /picoreflow/index.html HTTP/1.1" 200 18782 0.002272
+2025-12-13 22:28:20,660 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:28:21,362 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126EE00>
+2025-12-13 22:28:21,663 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:28:21,665 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:28:21,666 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:28:21,667 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:28:21,668 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:28:22,669 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:28:22,670 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:28:22,671 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:28:22,673 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:28:22,674 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.001197
+2025-12-13 22:28:22,676 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 200 93361 0.000996
+2025-12-13 22:28:22,679 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 200 17948 0.001997
+2025-12-13 22:28:22,682 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 200 5223 0.000998
+2025-12-13 22:28:22,684 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 200 13475 0.000994
+2025-12-13 22:28:22,688 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 200 125101 0.002403
+2025-12-13 22:28:22,691 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 200 28004 0.002181
+2025-12-13 22:28:22,694 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 200 1390 0.002094
+2025-12-13 22:28:22,697 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 200 61012 0.002205
+2025-12-13 22:28:22,700 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 200 22696 0.001993
+2025-12-13 22:28:22,703 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 200 3442 0.001213
+2025-12-13 22:28:22,706 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 200 5736 0.001062
+2025-12-13 22:28:22,709 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 200 103140 0.000000
+2025-12-13 22:28:22,714 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 200 21893 0.001004
+2025-12-13 22:28:22,717 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 200 15565 0.001036
+2025-12-13 22:28:22,730 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 200 748 0.002001
+2025-12-13 22:28:22,739 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 200 11455 0.002004
+2025-12-13 22:28:22,742 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 200 17551 0.000998
+2025-12-13 22:28:22,747 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23527 0.000999
+2025-12-13 22:28:22,920 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:28:22] "GET /favicon.ico HTTP/1.1" 404 872 0.000000
+2025-12-13 22:28:23,025 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:28:23,039 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:28:23,054 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:28:23,071 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:28:23,087 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:28:23,101 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:28:23,113 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:28:23,364 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F8512D0220>
+2025-12-13 22:28:24,115 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:28:24,117 INFO kiln-controller: GET command received
+2025-12-13 22:32:50,557 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:32:50] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 200 61012 0.000000
+2025-12-13 22:33:37,626 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:37] "GET /picoreflow/index.html HTTP/1.1" 304 114 0.001141
+2025-12-13 22:33:37,631 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:33:37,632 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:33:38,635 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:33:38,637 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:33:38,638 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:33:38,639 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:33:38,639 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:33:39,483 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126F880>
+2025-12-13 22:33:39,641 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:33:39,642 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:33:39,643 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:33:39,644 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:39] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.001000
+2025-12-13 22:33:39,648 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:33:39,664 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:33:39,679 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:33:39,694 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:33:39,711 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:33:39,726 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:33:39,741 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:33:40,745 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:40] "GET /picoreflow/index.html HTTP/1.1" 200 18782 0.001019
+2025-12-13 22:33:40,748 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:33:40,751 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:33:41,485 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F8512D0340>
+2025-12-13 22:33:41,753 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:33:41,755 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:33:41,756 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:33:41,757 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:33:41,758 INFO kiln-controller: websocket (status) closed
+2025-12-13 22:33:42,759 ERROR kiln-controller: Connection is already closed
+2025-12-13 22:33:42,762 INFO kiln-controller: websocket (control) closed
+2025-12-13 22:33:42,763 INFO kiln-controller: websocket (config) closed
+2025-12-13 22:33:42,763 INFO kiln-controller: websocket (storage) closed
+2025-12-13 22:33:42,764 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 946 0.000000
+2025-12-13 22:33:42,767 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery-1.10.2.min.js HTTP/1.1" 200 93361 0.002004
+2025-12-13 22:33:42,769 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery.event.drag-2.2.js HTTP/1.1" 200 13475 0.001054
+2025-12-13 22:33:42,773 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery.flot.js HTTP/1.1" 200 125101 0.000998
+2025-12-13 22:33:42,777 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/css/bootstrap.min.css HTTP/1.1" 200 103140 0.000998
+2025-12-13 22:33:42,780 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery.flot.draggable.js HTTP/1.1" 200 5736 0.001081
+2025-12-13 22:33:42,783 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/bootstrap.min.js HTTP/1.1" 200 28004 0.001421
+2025-12-13 22:33:42,786 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery.bootstrap-growl.min.js HTTP/1.1" 200 1390 0.001078
+2025-12-13 22:33:42,789 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/select2.min.js HTTP/1.1" 200 61012 0.001467
+2025-12-13 22:33:42,792 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/picoreflow.js HTTP/1.1" 200 22696 0.001238
+2025-12-13 22:33:42,795 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/css/bootstrap-theme.min.css HTTP/1.1" 200 17948 0.001034
+2025-12-13 22:33:42,798 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/css/bootstrap-modal.css HTTP/1.1" 200 5223 0.001000
+2025-12-13 22:33:42,800 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/css/select2.css HTTP/1.1" 200 21893 0.000998
+2025-12-13 22:33:42,803 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/css/picoreflow.css HTTP/1.1" 200 15565 0.001348
+2025-12-13 22:33:42,805 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/js/jquery.flot.resize.js HTTP/1.1" 200 3442 0.001023
+2025-12-13 22:33:42,825 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/images/panel_bg.png HTTP/1.1" 200 748 0.002028
+2025-12-13 22:33:42,829 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/fonts/digital-7-webfont.woff HTTP/1.1" 200 11455 0.001000
+2025-12-13 22:33:42,832 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/fonts/tables.woff HTTP/1.1" 200 17551 0.001523
+2025-12-13 22:33:42,835 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:42] "GET /picoreflow/assets/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23527 0.001004
+2025-12-13 22:33:43,017 INFO geventwebsocket.handler: 127.0.0.1 - - [2025-12-13 22:33:43] "GET /favicon.ico HTTP/1.1" 404 872 0.000000
+2025-12-13 22:33:43,126 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:33:43,139 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:33:43,155 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:33:43,170 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:33:43,188 INFO kiln-controller: websocket (status) opened
+2025-12-13 22:33:43,201 INFO kiln-controller: websocket (control) opened
+2025-12-13 22:33:43,215 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:33:43,488 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126F160>
+2025-12-13 22:33:44,218 INFO kiln-controller: websocket (storage) opened
+2025-12-13 22:33:44,220 INFO kiln-controller: GET command received
+2025-12-13 22:33:45,490 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126EFE0>
+2025-12-13 22:34:14,316 INFO kiln-controller: websocket (config) opened
+2025-12-13 22:35:01,226 INFO kiln-controller: Wrote settings.json
+2025-12-13 22:35:05,892 INFO kiln-controller: Wrote settings.json
+2025-12-14 02:12:41,554 INFO kiln-controller: websocket (status) closed
+2025-12-14 02:12:41,566 INFO kiln-controller: websocket (storage) closed
+2025-12-14 02:12:41,568 INFO kiln-controller: websocket (config) closed
+2025-12-14 02:12:42,570 ERROR kiln-controller: Connection is already closed
+2025-12-14 02:12:42,571 INFO kiln-controller: websocket (control) closed
+2025-12-14 02:12:42,780 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126C580>
+2025-12-14 12:00:19,345 INFO kiln-controller: websocket (status) closed
+2025-12-14 12:00:20,098 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126D780>
+2025-12-14 12:00:20,352 ERROR kiln-controller: Connection is already closed
+2025-12-14 12:00:20,352 INFO kiln-controller: websocket (control) closed
+2025-12-14 12:00:20,353 INFO kiln-controller: websocket (config) closed
+2025-12-14 12:00:20,354 INFO kiln-controller: websocket (storage) closed
+2025-12-14 12:00:20,355 INFO kiln-controller: websocket (status) closed
+2025-12-14 12:00:21,357 ERROR kiln-controller: Connection is already closed
+2025-12-14 12:00:21,358 INFO kiln-controller: websocket (control) closed
+2025-12-14 12:00:21,359 INFO kiln-controller: websocket (config) closed
+2025-12-14 12:00:21,359 INFO kiln-controller: websocket (storage) closed
+2025-12-14 12:00:22,102 ERROR ovenWatcher: could not write to socket <geventwebsocket.websocket.WebSocket object at 0x000001F85126DAE0>
+2025-12-14 12:28:19,526 INFO kiln-controller: websocket (config) opened
+2025-12-14 12:28:20,531 INFO kiln-controller: Wrote settings.json
+2025-12-14 12:28:21,533 INFO kiln-controller: Wrote settings.json
+2025-12-14 12:28:22,536 INFO kiln-controller: websocket (config) closed
