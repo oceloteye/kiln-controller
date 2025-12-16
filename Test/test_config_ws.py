@@ -10,6 +10,7 @@ import websockets
 
 SERVER = os.environ.get('KILN_SERVER', 'ws://127.0.0.1:8081/config')
 
+
 @pytest.mark.asyncio
 async def test_config_set_and_echo():
     """Connect to /config, send SET and expect echoed config containing our values."""

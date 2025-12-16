@@ -19,13 +19,25 @@ var protocol = 'ws:';
 if (window.location.protocol == 'https:') {
     protocol = 'wss:';
 }
-var host = "" + protocol + "//" + window.location.hostname + ":" + window.location.port;
-var ws_status = new WebSocket(host+"/status");
-var ws_control = new WebSocket(host+"/control");
-var ws_config = new WebSocket(host+"/config");
+// Build host URL, omit empty port to avoid malformed URLs like 'host:'.
+var hostPort = window.location.port ? (":" + window.location.port) : "";
+var host = protocol + "//" + window.location.hostname + hostPort;
+
+// Create WebSocket connections defensively (some environments may not support WS or the URL may be invalid).
+var ws_status, ws_control, ws_config, ws_storage;
+try {
+    if (typeof WebSocket !== 'undefined') {
+        try { ws_status = new WebSocket(host + "/status"); } catch(e) { console.error('ws_status failed', e); }
+        try { ws_control = new WebSocket(host + "/control"); } catch(e) { console.error('ws_control failed', e); }
+        try { ws_config = new WebSocket(host + "/config"); } catch(e) { console.error('ws_config failed', e); }
+        try { ws_storage = new WebSocket(host + "/storage"); } catch(e) { console.error('ws_storage failed', e); }
+    }
+} catch(e) {
+    console.error('WebSocket initialization error', e);
+}
+
 // expose a friendly alias for console debugging (`socket_config`) and other scripts
-try { window.socket_config = ws_config; } catch(e) {}
-var ws_storage = new WebSocket(host+"/storage");
+try { if (typeof ws_config !== 'undefined') window.socket_config = ws_config; } catch(e) {}
 var expectingConfigAck = false;
 var configAckTimer = null;
 
@@ -881,3 +893,5 @@ function saveSettings()
 
     }
 });
+
+// (Duplicate-container mitigation removed — root cause fixed in state.html)
