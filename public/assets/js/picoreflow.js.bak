@@ -497,7 +497,7 @@ $(document).ready(function()
     if(!("WebSocket" in window))
     {
         $('#chatLog, input, button, #examples').fadeOut("fast");
-        $('<p>Oh no, you need a browser that supports WebSockets. How about <a href="http://www.google.com/chrome">Google Chrome</a>?</p>').appendTo('.pcf-container');
+        $('<p>Oh no, you need a browser that supports WebSockets. How about <a href="http://www.google.com/chrome">Google Chrome</a>?</p>').appendTo('#container');
     }
     else
     {
@@ -682,8 +682,7 @@ $(document).ready(function()
             if (expectingConfigAck) {
                 expectingConfigAck = false;
                 if (configAckTimer) { clearTimeout(configAckTimer); configAckTimer = null; }
-                try { forceHideSettingsModal(); } catch (e) {}
-                try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
+                try { $('#settingsModal').modal('hide'); } catch (e) {}
                 $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
             }
 
@@ -691,7 +690,7 @@ $(document).ready(function()
             // or another client), still close it and notify success so the UI stays in sync.
             try {
                 if ($('#settingsModal').is(':visible')) {
-                    try { forceHideSettingsModal(); } catch (e) {}
+                    try { $('#settingsModal').modal('hide'); } catch (e) {}
                     $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
                 }
             } catch (e) { /* ignore DOM/query failures */ }
@@ -699,36 +698,6 @@ $(document).ready(function()
         }
 
 // Save settings from modal and send to server via ws_config
-// Force-hide helper: tries Bootstrap modal hide, then falls back to DOM cleanup
-function forceHideSettingsModal() {
-    try {
-        var modal = $('#settingsModal');
-        // If focus is inside the modal, move it to the settings button (or body) first
-        try {
-            var active = document.activeElement;
-            if (modal && modal.length && active && modal[0].contains(active)) {
-                try { if (active && typeof active.blur === 'function') active.blur(); } catch (e) {}
-                var btn = document.getElementById('btn_settings');
-                if (btn) {
-                    try { btn.focus(); } catch (e) {}
-                } else {
-                    try {
-                        document.body.setAttribute('tabindex', '-1');
-                        document.body.focus();
-                        document.body.removeAttribute('tabindex');
-                    } catch (e) {}
-                }
-            }
-        } catch (e) {}
-
-        try { modal.modal('hide'); } catch (e) {}
-        try { $('.modal-backdrop').remove(); } catch (e) {}
-        try { modal.hide(); } catch (e) {}
-        try { modal.removeClass('in'); } catch (e) {}
-        try { $('body').removeClass('modal-open'); } catch (e) {}
-    } catch (e) {}
-}
-
 function saveSettings()
 {
     var data = {};
@@ -765,7 +734,6 @@ function saveSettings()
     if (typeof ws_config !== 'undefined' && ws_config.readyState === WebSocket.OPEN) {
         try {
             ws_config.send(payload);
-            try { forceHideSettingsModal(); } catch(e) {}
             startAckTimer();
             return;
         } catch (e) {
@@ -785,7 +753,6 @@ function saveSettings()
         tmp.onopen = function() {
             try {
                 tmp.send(payload);
-                try { forceHideSettingsModal(); } catch(e) {}
             } catch (e) {
                 clearTimeout(tmpTimer);
                 try { tmp.close(); } catch(e) {}
@@ -795,7 +762,7 @@ function saveSettings()
         tmp.onmessage = function(e) {
             clearTimeout(tmpTimer);
             try { tmp.close(); } catch(e) {}
-            try { forceHideSettingsModal(); } catch(e) {}
+            try { $('#settingsModal').modal('hide'); } catch(e) {}
             try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
             $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
         };
@@ -914,7 +881,3 @@ function saveSettings()
 
     }
 });
-
-// Expose critical functions to global scope for inline handlers
-try { window.saveSettings = saveSettings; window.forceHideSettingsModal = forceHideSettingsModal; } catch(e) {}
-

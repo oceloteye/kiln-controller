@@ -1,0 +1,11 @@
+{
+  "name": "kiln-controller-tests",
+  "version": "1.0.0",
+  "description": "E2E tests for kiln-controller UI",
+  "scripts": {
+    "modal:e2e": "node modal_e2e.js"
+  },
+  "dependencies": {
+    "puppeteer": "^20.7.0"
+  }
+}

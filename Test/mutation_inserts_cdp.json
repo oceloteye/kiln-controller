@@ -1,0 +1,704 @@
+[
+  {
+    "op": "appendChild",
+    "parent": "<div></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12093\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12069)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object Comment]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<html lang=\"en\"><head>\n\n <title>Kiln Controller</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n <script src=\"assets/js/jquery-1.10.2.min.js\"></script></head></html>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12374\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12350)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:13565\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:13485)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input type=\"hidden\">"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select></select>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:28697\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<option></option>"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29310\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<nav></nav>"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29520\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input type=\"checkbox\">"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29877\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input value=\"t\" type=\"radio\" checked=\"t\" name=\"t\">"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29933\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object DocumentFragment]"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29947\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object DocumentFragment]"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30236\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"background-clip: content-box;\">  <link><table></table><a href=\"/a\" style=\"top: 1px; float: left; opacity: 0.5;\">a</a><input type=\"chec"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25240\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12093\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12069)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object Comment]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<html lang=\"en\"><head>\n\n <title>Kiln Controller</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n <script src=\"assets/js/jquery-1.10.2.min.js\"></script>\n <script src=\"a",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12374\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:12350)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:13565\n    at ut (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:10922)\n    at at.setDocument (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:13485)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:24908\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:25751\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input type=\"hidden\">"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select></select>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:28697\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<option></option>"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29310\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<nav></nav>"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29520\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input type=\"checkbox\">"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29877\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<input value=\"t\" type=\"radio\" checked=\"t\" name=\"t\">"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29933\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object DocumentFragment]"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:29947\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "[object DocumentFragment]"
+  },
+  {
+    "op": "cloneNode",
+    "parent": "null",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.cloneNode (<anonymous>:22:90)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30236\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:2\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"background-clip: content-box;\">  <link><table></table><a href=\"/a\" style=\"top: 1px; float: left; opacity: 0.5;\">a</a><input type=\"chec"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25240\n    at http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:6:28890",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<body>\n\n <div class=\"container\">\n  <div id=\"status\">\n   <div class=\"ds-title-panel\">\n    <div class=\"ds-title\">Sensor Temp</div>\n    <div class=\"ds-title\">Target Temp</div>\n    <div class=\"ds-title\">H",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30691)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div style=\"border: 0px; width: 0px; height: 0px; position: absolute; top: 0px; left: -9999px; margin-top: 1px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div style=\"border: 0px; width: 0px; height: 0px; position: absolute; top: 0px; left: -9999px; margin-top: 1px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30706)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"background-clip: content-box;\">  <link><table></table><a href=\"/a\" style=\"top: 1px; float: left; opacity: 0.5;\">a</a><input type=\"chec"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"box-sizing: border-box; padding: 1px; border: 1px; display: block; width: 4px; margin-top: 1%; position: absolute; top: 1%;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:31438)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<body style=\"\">\n\n <div class=\"container\">\n  <div id=\"status\">\n   <div class=\"ds-title-panel\">\n    <div class=\"ds-title\">Sensor Temp</div>\n    <div class=\"ds-title\">Target Temp</div>\n    <div class=\"ds",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30691)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div style=\"border: 0px; width: 0px; height: 0px; position: absolute; top: 0px; left: -9999px; margin-top: 1px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div style=\"border: 0px; width: 0px; height: 0px; position: absolute; top: 0px; left: -9999px; margin-top: 1px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:30706)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"background-clip: content-box;\">  <link><table></table><a href=\"/a\" style=\"top: 1px; float: left; opacity: 0.5;\">a</a><input type=\"chec"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div classname=\"t\" onsubmit=\"t\" onchange=\"t\" onfocusin=\"t\" style=\"box-sizing: border-box; padding: 1px; border: 1px; display: block; width: 4px; margin-top: 1%; position: absolute; top: 1%;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:31438)\n    at c (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26036)\n    at Object.fireWith [as resolveWith] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:26840)\n    at x.ready (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:3305)\n    at HTMLDocument.q (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:717)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at init.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27127)\n    at x.access (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:6690)\n    at init.html (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26701)\n    at ws_status.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:615:32)",
+    "tag": "[object Text]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<span id=\"act_temp\"></span>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSpanElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at init.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27127)\n    at x.access (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:6690)\n    at init.html (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26701)\n    at ws_status.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:615:32)",
+    "tag": "[object Text]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at init.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27127)\n    at x.access (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:6690)\n    at init.html (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26701)\n    at ws_status.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:619:33)",
+    "tag": "[object Text]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<span id=\"heat_rate\"></span>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSpanElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at init.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27127)\n    at x.access (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:6690)\n    at init.html (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26701)\n    at ws_status.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:619:33)",
+    "tag": "[object Text]"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"0\">cone-05-fast-bisque</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select id=\"e2\" class=\"select2\" style=\"margin-top: 4px\"></select>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSelectElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"0\">cone-05-fast-bisque</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at new Canvas (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:61:6)\n    at setupCanvases (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1285:23)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:693:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)",
+    "tag": "<canvas class=\"flot-base\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px;\"></canvas>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div id=\"graph_container\" class=\"graph\" style=\"padding: 0px; position: relative;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at new Canvas (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:61:6)\n    at setupCanvases (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1285:23)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:693:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)",
+    "tag": "<canvas class=\"flot-base\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px;\"></canvas>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at new Canvas (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:61:6)\n    at setupCanvases (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1286:23)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:693:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)",
+    "tag": "<canvas class=\"flot-overlay\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px;\"></canvas>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div id=\"graph_container\" class=\"graph\" style=\"padding: 0px; position: relative;\"><canvas class=\"flot-base\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px; width: 1108px; height: 300px",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at new Canvas (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:61:6)\n    at setupCanvases (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1286:23)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:693:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)",
+    "tag": "<canvas class=\"flot-overlay\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px;\"></canvas>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at x.parseHTML (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:4288)\n    at new init (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:1235)\n    at x (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:225)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:234:26)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at x.parseHTML (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:4288)\n    at new init (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:1235)\n    at x (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:225)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:234:26)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-text\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.after (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26033)\n    at x.fn.<computed> [as insertAfter] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:244:7)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-text\" style=\"position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);\"></div>"
+  },
+  {
+    "op": "insertBefore",
+    "parent": "<div id=\"graph_container\" class=\"graph\" style=\"padding: 0px; position: relative;\"><canvas class=\"flot-base\" style=\"direction: ltr; position: absolute; left: 0px; top: 0px; width: 1108px; height: 300px",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.insertBefore (<anonymous>:18:54)\n    at HTMLCanvasElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26097)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.after (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:26033)\n    at x.fn.<computed> [as insertAfter] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:244:7)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-text\" style=\"position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:256:6)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-text\" style=\"position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:256:6)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">1</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">1</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">2</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">2</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">3</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">3</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">4</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">4</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">5</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">5</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">6</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">6</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">7</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">7</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">8</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">8</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">9</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: -9999px;\">9</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:256:6)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-text\" style=\"position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);\"><div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px;\"></",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextLayer (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:256:6)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:20)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)",
+    "tag": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">1000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">1000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">1500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">1500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">2000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at x.fn.<computed> [as appendTo] (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:29802)\n    at Canvas.getTextInfo (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:344:6)\n    at measureTickLabels (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1389:36)\n    at Object.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1590:21)\n    at x.each (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:4:5347)",
+    "tag": "<div style=\"position: absolute; top: -9999px;\">2000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 34px; text-align: center;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 34px; text-align: center;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 157px; text-align: center;\">1</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 157px; text-align: center;\">1</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 280px; text-align: center;\">2</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 280px; text-align: center;\">2</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 404px; text-align: center;\">3</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 404px; text-align: center;\">3</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 527px; text-align: center;\">4</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 527px; text-align: center;\">4</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 650px; text-align: center;\">5</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 650px; text-align: center;\">5</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 774px; text-align: center;\">6</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 774px; text-align: center;\">6</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 897px; text-align: center;\">7</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 897px; text-align: center;\">7</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1021px; text-align: center;\">8</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-x-axis flot-x1-axis xAxis x1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Dig",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; max-width: 110px; top: 285px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1021px; text-align: center;\">8</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 20px; text-align: right;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px; display: none;\"></div>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 20px; text-align: right;\">0</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 202px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 7px; text-align: right;\">500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 202px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 7px; text-align: right;\">500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 137px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">1000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 137px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">1000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 71px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">1500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 71px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">1500</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 5px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">2000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<div class=\"flot-y-axis flot-y1-axis yAxis y1Axis\" style=\"position: absolute; inset: 0px; display: none;\"><div style=\"position: absolute; top: 268px; font: small-caps 14px / 14px Digi; color: rgba(216",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at Canvas.render (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:193:18)\n    at draw (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:1871:21)\n    at new Plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:696:9)\n    at $.plot (http://127.0.0.1:8081/picoreflow/assets/js/jquery.flot.js:3118:20)\n    at updateProfile (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:89:20)",
+    "tag": "<div style=\"position: absolute; top: 5px; font: small-caps 14px / 14px Digi; color: rgba(216, 211, 197, 0.85); left: 1px; text-align: right;\">2000</div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"1\">cone-05-long-bisque</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select id=\"e2\" class=\"select2\" style=\"margin-top: 4px\"><option value=\"0\">cone-05-fast-bisque</option></select>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSelectElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"1\">cone-05-long-bisque</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"2\">cone-6-long-glaze</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select id=\"e2\" class=\"select2\" style=\"margin-top: 4px\"><option value=\"0\">cone-05-fast-bisque</option><option value=\"1\">cone-05-long-bisque</option></select>",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSelectElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"2\">cone-6-long-glaze</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"3\">test-200-250</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select id=\"e2\" class=\"select2\" style=\"margin-top: 4px\"><option value=\"0\">cone-05-fast-bisque</option><option value=\"1\">cone-05-long-bisque</option><option value=\"2\">cone-6-long-glaze</option></select",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSelectElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"3\">test-200-250</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:30951)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<div></div>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "[object DocumentFragment]",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at x.buildFragment (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:31710)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27767)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"4\">test-fast</option>"
+  },
+  {
+    "op": "appendChild",
+    "parent": "<select id=\"e2\" class=\"select2\" style=\"margin-top: 4px\"><option value=\"0\">cone-05-fast-bisque</option><option value=\"1\">cone-05-long-bisque</option><option value=\"2\">cone-6-long-glaze</option><option ",
+    "stack": "Error\n    at record (<anonymous>:6:20)\n    at Node.appendChild (<anonymous>:16:48)\n    at HTMLSelectElement.<anonymous> (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25692)\n    at init.domManip (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:27981)\n    at init.append (http://127.0.0.1:8081/picoreflow/assets/js/jquery-1.10.2.min.js:5:25581)\n    at ws_storage.onmessage (http://127.0.0.1:8081/picoreflow/assets/js/picoreflow.js:849:26)",
+    "tag": "<option value=\"4\">test-fast</option>"
+  }
+]

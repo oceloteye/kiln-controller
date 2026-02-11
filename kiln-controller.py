@@ -35,8 +35,6 @@ def _load_persisted_settings():
     except Exception as e:
         log.error('Failed to load persisted settings: %s' % e)
 
-_load_persisted_settings()
-
 logging.basicConfig(level=config.log_level, format=config.log_format)
 log = logging.getLogger("kiln-controller")
 log.info("Starting kiln controller")
@@ -280,33 +278,10 @@ def handle_config():
     while True:
         try:
             message = wsock.receive()
-<<<<<<< HEAD
             if not message:
                 break
-            try:
-                msgdict = json.loads(message)
-            except:
-                msgdict = {}
 
-            # Allow clients to set persisted settings via {cmd:'SET', data:{...}}
-            if msgdict.get('cmd') == 'SET':
-                data = msgdict.get('data', {})
-                for k, v in data.items():
-                    try:
-                        setattr(config, k, v)
-                    except Exception:
-                        pass
-                # persist only the provided keys
-                try:
-                    with open(os.path.join(script_dir, 'settings.json'), 'w') as sf:
-                        json.dump(data, sf)
-                    log.info('Wrote settings.json')
-                except Exception:
-                    log.exception('Failed writing settings.json')
-                wsock.send(get_config())
-            else:
-=======
-            # Expect either a simple 'GET' or a JSON command
+            # Try to parse JSON command, fall back to simple GET string
             try:
                 j = json.loads(message)
             except Exception:
@@ -315,10 +290,11 @@ def handle_config():
             # If client requests GET, reply with current config
             if message == 'GET' or (j and j.get('cmd') == 'GET'):
                 wsock.send(get_config())
+
             # Allow clients to SET config values (persisted in settings.json)
             elif j and j.get('cmd') == 'SET':
                 data = j.get('data', {})
-                # Update runtime config values
+                # Update runtime config values where provided
                 try:
                     if 'kwh_rate' in data:
                         config.kwh_rate = float(data['kwh_rate'])
@@ -329,7 +305,7 @@ def handle_config():
                 except Exception as e:
                     log.error("Failed to apply config settings: %s" % e)
 
-                # persist to settings.json
+                # Persist the settings (write the current canonical set)
                 try:
                     settings_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'settings.json'))
                     with open(settings_path, 'w') as sf:
@@ -338,13 +314,15 @@ def handle_config():
                             'kw_elements': config.kw_elements,
                             'currency_type': config.currency_type
                         }, sf)
+                    log.info('Wrote settings.json')
                 except Exception as e:
-                    log.error("Failed to write settings.json: %s" % e)
+                    log.error('Failed to write settings.json: %s' % e)
 
+                # Echo back the current config
                 wsock.send(get_config())
+
             else:
-                # fallback: always send current config
->>>>>>> 475aba8a1e8dffe86d7307c46d13e0605d20e07c
+                # Fallback: always send current config
                 wsock.send(get_config())
         except WebSocketError:
             break
@@ -443,16 +421,14 @@ def delete_profile(profile):
     return True
 
 def get_config():
-    return json.dumps({"temp_scale": config.temp_scale,
-        "time_scale_slope": config.time_scale_slope,
-        "time_scale_profile": config.time_scale_profile,
-        "kwh_rate": config.kwh_rate,
+    return json.dumps({
+        "temp_scale": getattr(config, 'temp_scale', None),
+        "time_scale_slope": getattr(config, 'time_scale_slope', None),
+        "time_scale_profile": getattr(config, 'time_scale_profile', None),
+        "kwh_rate": getattr(config, 'kwh_rate', None),
         "kw_elements": getattr(config, 'kw_elements', None),
-<<<<<<< HEAD
-        "currency_type": config.currency_type})
-=======
-        "currency_type": config.currency_type})    
->>>>>>> 475aba8a1e8dffe86d7307c46d13e0605d20e07c
+        "currency_type": getattr(config, 'currency_type', None)
+    })
 
 def main():
     ip = "0.0.0.0"
