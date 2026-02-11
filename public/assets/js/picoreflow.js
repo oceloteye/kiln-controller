@@ -842,37 +842,31 @@ function saveSettings()
             return;
         }
     }
-
-    // Otherwise open a temporary websocket to send the SET and wait for the response on it
+    // Try HTTP POST fallback first (same-origin)
     try {
-        var tmp = new WebSocket(host + '/config');
-        var tmpTimer = setTimeout(function() {
-            try { tmp.close(); } catch(e) {}
-            notifyFail();
-        }, 4000);
-
-        tmp.onopen = function() {
-            try {
-                tmp.send(payload);
-                try { forceHideSettingsModal(); } catch(e) {}
-            } catch (e) {
-                clearTimeout(tmpTimer);
-                try { tmp.close(); } catch(e) {}
-                notifyFail();
-            }
-        };
-        tmp.onmessage = function(e) {
-            clearTimeout(tmpTimer);
-            try { tmp.close(); } catch(e) {}
+        fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload })
+        .then(function(resp) {
+            if (!resp.ok) throw new Error('http save failed');
+            return resp.text();
+        })
+        .then(function() {
             try { forceHideSettingsModal(); } catch(e) {}
             try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
             $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
-        };
-        tmp.onerror = function() {
-            clearTimeout(tmpTimer);
-            try { tmp.close(); } catch(e) {}
-            notifyFail();
-        };
+        })
+        .catch(function() {
+            // If HTTP fallback fails, try temporary websocket as last resort
+            try {
+                var tmp = new WebSocket(host + '/config');
+                var tmpTimer = setTimeout(function() { try { tmp.close(); } catch(e) {} ; notifyFail(); }, 4000);
+                tmp.onopen = function() {
+                    try { tmp.send(payload); try { forceHideSettingsModal(); } catch(e) {} } catch(e) { clearTimeout(tmpTimer); try { tmp.close(); } catch(e) {} ; notifyFail(); }
+                };
+                tmp.onmessage = function(e) { clearTimeout(tmpTimer); try { tmp.close(); } catch(e) {} ; try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {} ; $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 }); };
+                tmp.onerror = function() { clearTimeout(tmpTimer); try { tmp.close(); } catch(e) {} ; notifyFail(); };
+            } catch (e) { notifyFail(); }
+        });
+        return;
     } catch (e) {
         notifyFail();
     }

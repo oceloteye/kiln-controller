@@ -359,6 +359,75 @@ def handle_config():
     log.info("websocket (config) closed")
 
 
+@app.post('/api/config')
+def api_config():
+    """HTTP endpoint fallback to update configuration (accepts same payload as WS SET).
+    Returns the current config JSON on success.
+    """
+    try:
+        j = bottle.request.json
+        if not j:
+            abort(400, 'expected JSON body')
+
+        # Accept either {cmd: 'SET', data: {...}} or a plain dict of keys
+        if isinstance(j, dict) and j.get('cmd') == 'SET':
+            data = j.get('data', {})
+        else:
+            data = j
+
+        # Apply settings (reuse same casting logic as websocket handler)
+        try:
+            for k, v in data.items():
+                if hasattr(config, k):
+                    cur = getattr(config, k)
+                    try:
+                        if isinstance(cur, bool):
+                            if isinstance(v, str):
+                                val = v.lower() in ['1', 'true', 'yes', 'on']
+                            else:
+                                val = bool(v)
+                        elif isinstance(cur, int) and not isinstance(cur, bool):
+                            val = int(v)
+                        elif isinstance(cur, float):
+                            val = float(v)
+                        else:
+                            val = v
+                        setattr(config, k, val)
+                    except Exception:
+                        try:
+                            setattr(config, k, v)
+                        except Exception:
+                            log.debug('Could not set config.%s to %r' % (k, v))
+        except Exception as e:
+            log.error('Failed to apply config settings (http): %s' % e)
+
+        # Persist merged settings
+        try:
+            settings_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'settings.json'))
+            persisted = {}
+            if os.path.exists(settings_path):
+                try:
+                    with open(settings_path, 'r', encoding='utf-8-sig') as pf:
+                        persisted = json.load(pf)
+                except Exception:
+                    persisted = {}
+            for k in data.keys():
+                if hasattr(config, k):
+                    persisted[k] = getattr(config, k)
+                else:
+                    persisted[k] = data[k]
+            with open(settings_path, 'w', encoding='utf-8') as sf:
+                json.dump(persisted, sf)
+            log.info('Wrote settings.json via HTTP')
+        except Exception as e:
+            log.error('Failed to write settings.json (http): %s' % e)
+
+        return get_config()
+    except Exception as e:
+        log.exception('api_config failed: %s' % e)
+        abort(500, 'internal error')
+
+
 @app.route('/status')
 def handle_status():
     wsock = get_websocket_from_request()
