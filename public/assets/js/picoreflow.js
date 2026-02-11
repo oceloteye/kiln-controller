@@ -958,7 +958,6 @@ function saveSettings()
     if (typeof ws_config !== 'undefined' && ws_config.readyState === WebSocket.OPEN) {
         try {
             ws_config.send(payload);
-            try { forceHideSettingsModal(); } catch(e) {}
             return;
         } catch (e) {
             notifyFail();
