@@ -1022,6 +1022,85 @@ function validateSettings(data) {
     return { ok:true };
 }
 
+// Per-field validation used for inline errors
+function validateField(id, value) {
+    try {
+        switch(id) {
+            case 'kwh_rate_input':
+                var v = parseFloat(value); if (isNaN(v) || v < 0) return 'Cost per kWh must be a non-negative number'; break;
+            case 'kw_elements_input':
+                var v = parseFloat(value); if (isNaN(v) || v <= 0) return 'Kilowatts must be a positive number'; break;
+            case 'temperature_average_samples_input':
+                var v = parseInt(value); if (isNaN(v) || v <= 0) return 'Samples must be a positive integer'; break;
+            case 'throttle_percent_input':
+                var v = parseFloat(value); if (isNaN(v) || v < 0 || v > 100) return 'Percent must be 0-100'; break;
+            case 'pid_kp_input': case 'pid_ki_input': case 'pid_kd_input':
+                var v = parseFloat(value); if (isNaN(v)) return 'Must be numeric'; break;
+            case 'pid_control_window_input':
+                var v = parseFloat(value); if (isNaN(v) || v <= 0) return 'Must be positive'; break;
+            case 'temp_scale_select':
+                if (['c','f'].indexOf(String(value))===-1) return 'Invalid temperature scale'; break;
+            case 'time_scale_profile_select': case 'time_scale_slope_select':
+                if (['s','m','h'].indexOf(String(value))===-1) return 'Must be s/m/h'; break;
+            default:
+                return null;
+        }
+    } catch (e) { return 'Invalid value'; }
+    return null;
+}
+
+function showFieldError($el, msg) {
+    var $group = $el.closest('.form-group');
+    $group.addClass('has-error');
+    var id = $el.attr('id');
+    var $err = $group.find('.help-block.field-error');
+    if ($err.length === 0) {
+        $err = $('<span class="help-block field-error"></span>');
+        $group.append($err);
+    }
+    $err.text(msg);
+}
+
+function clearFieldError($el) {
+    var $group = $el.closest('.form-group');
+    $group.removeClass('has-error');
+    $group.find('.help-block.field-error').remove();
+}
+
+function validateAllFields() {
+    var ids = [
+        'kwh_rate_input','kw_elements_input','temperature_average_samples_input','throttle_percent_input',
+        'pid_kp_input','pid_ki_input','pid_kd_input','pid_control_window_input',
+        'temp_scale_select','time_scale_profile_select','time_scale_slope_select'
+    ];
+    var ok = true;
+    ids.forEach(function(id) {
+        var $el = $('#'+id);
+        if ($el.length === 0) return;
+        var val = $el.val();
+        var err = validateField(id, val);
+        if (err) { showFieldError($el, err); ok = false; } else { clearFieldError($el); }
+    });
+    try { $('#settings_save_btn').prop('disabled', !ok); } catch(e) {}
+    return ok;
+}
+
+// Attach inline validation handlers on DOM ready
+$(function(){
+    var watchIds = ['kwh_rate_input','kw_elements_input','temperature_average_samples_input','throttle_percent_input','pid_kp_input','pid_ki_input','pid_kd_input','pid_control_window_input','temp_scale_select','time_scale_profile_select','time_scale_slope_select'];
+    watchIds.forEach(function(id){
+        var $el = $('#'+id);
+        if ($el.length === 0) return;
+        $el.on('input change', function(){
+            var err = validateField(id, $(this).val());
+            if (err) showFieldError($(this), err); else clearFieldError($(this));
+            validateAllFields();
+        });
+    });
+    // initial validation pass
+    validateAllFields();
+});
+
         // Control Socket ////////////////////////////////
 
         ws_control.onopen = function()
