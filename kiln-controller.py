@@ -294,26 +294,55 @@ def handle_config():
             # Allow clients to SET config values (persisted in settings.json)
             elif j and j.get('cmd') == 'SET':
                 data = j.get('data', {})
-                # Update runtime config values where provided
+                # Update runtime config values where provided.
+                # We try to cast to the existing attribute type where possible.
                 try:
-                    if 'kwh_rate' in data:
-                        config.kwh_rate = float(data['kwh_rate'])
-                    if 'kw_elements' in data:
-                        config.kw_elements = float(data['kw_elements'])
-                    if 'currency_type' in data:
-                        config.currency_type = str(data['currency_type'])
+                    for k, v in data.items():
+                        if hasattr(config, k):
+                            cur = getattr(config, k)
+                            try:
+                                if isinstance(cur, bool):
+                                    # accept booleans or truthy strings
+                                    if isinstance(v, str):
+                                        val = v.lower() in ['1', 'true', 'yes', 'on']
+                                    else:
+                                        val = bool(v)
+                                elif isinstance(cur, int) and not isinstance(cur, bool):
+                                    val = int(v)
+                                elif isinstance(cur, float):
+                                    val = float(v)
+                                else:
+                                    val = v
+                                setattr(config, k, val)
+                            except Exception:
+                                # fallback: set raw value
+                                try:
+                                    setattr(config, k, v)
+                                except Exception:
+                                    log.debug('Could not set config.%s to %r' % (k, v))
                 except Exception as e:
                     log.error("Failed to apply config settings: %s" % e)
 
-                # Persist the settings (write the current canonical set)
+                # Persist the settings: merge with any existing settings.json and write back
                 try:
                     settings_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'settings.json'))
-                    with open(settings_path, 'w') as sf:
-                        json.dump({
-                            'kwh_rate': config.kwh_rate,
-                            'kw_elements': config.kw_elements,
-                            'currency_type': config.currency_type
-                        }, sf)
+                    persisted = {}
+                    if os.path.exists(settings_path):
+                        try:
+                            with open(settings_path, 'r', encoding='utf-8-sig') as pf:
+                                persisted = json.load(pf)
+                        except Exception:
+                            persisted = {}
+
+                    # update persisted with latest provided values (use current runtime values for canonical types)
+                    for k in data.keys():
+                        if hasattr(config, k):
+                            persisted[k] = getattr(config, k)
+                        else:
+                            persisted[k] = data[k]
+
+                    with open(settings_path, 'w', encoding='utf-8') as sf:
+                        json.dump(persisted, sf)
                     log.info('Wrote settings.json')
                 except Exception as e:
                     log.error('Failed to write settings.json: %s' % e)
@@ -427,7 +456,20 @@ def get_config():
         "time_scale_profile": getattr(config, 'time_scale_profile', None),
         "kwh_rate": getattr(config, 'kwh_rate', None),
         "kw_elements": getattr(config, 'kw_elements', None),
-        "currency_type": getattr(config, 'currency_type', None)
+        "currency_type": getattr(config, 'currency_type', None),
+        "pid_kp": getattr(config, 'pid_kp', None),
+        "pid_ki": getattr(config, 'pid_ki', None),
+        "pid_kd": getattr(config, 'pid_kd', None),
+        "sensor_time_wait": getattr(config, 'sensor_time_wait', None),
+        "simulate": getattr(config, 'simulate', None),
+        "emergency_shutoff_temp": getattr(config, 'emergency_shutoff_temp', None),
+        "automatic_restarts": getattr(config, 'automatic_restarts', None),
+        "throttle_below_temp": getattr(config, 'throttle_below_temp', None),
+        "throttle_percent": getattr(config, 'throttle_percent', None),
+        "temperature_average_samples": getattr(config, 'temperature_average_samples', None),
+        "ac_freq_50hz": getattr(config, 'ac_freq_50hz', None),
+        "pid_control_window": getattr(config, 'pid_control_window', None),
+        "thermocouple_offset": getattr(config, 'thermocouple_offset', None)
     })
 
 def main():

@@ -91,13 +91,13 @@
 
   <!-- Settings Modal -->
   <div id="settingsModal" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-     <div class="modal-content">
+    <div class="modal-dialog" style="max-width:900px; width:90%;">
+    <div class="modal-content" style="max-height:80vh; overflow:visible;">
       <div class="modal-header">
        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
        <h3 class="modal-title">Settings</h3>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="max-height:calc(80vh - 140px); overflow-y:auto; -webkit-overflow-scrolling:touch; padding-right:12px;">
        <div class="form-group">
         <label for="kwh_rate_input">Cost per kWh</label>
         <input id="kwh_rate_input" type="text" class="form-control" />
@@ -109,6 +109,85 @@
        <div class="form-group">
         <label for="currency_type_input">Currency symbol</label>
         <input id="currency_type_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="temp_scale_select">Temperature Scale</label>
+        <select id="temp_scale_select" class="form-control">
+          <option value="c">Celsius (C)</option>
+          <option value="f">Fahrenheit (F)</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="time_scale_profile_select">Profile Time Scale</label>
+        <select id="time_scale_profile_select" class="form-control">
+          <option value="s">Seconds</option>
+          <option value="m">Minutes</option>
+          <option value="h">Hours</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="time_scale_slope_select">Slope Time Scale</label>
+        <select id="time_scale_slope_select" class="form-control">
+          <option value="s">Seconds</option>
+          <option value="m">Minutes</option>
+          <option value="h">Hours</option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label for="simulate_checkbox">Simulation Mode</label>
+        <input id="simulate_checkbox" type="checkbox" /> Enable simulation (no hardware)
+       </div>
+       <hr />
+       <h4>PID</h4>
+       <div class="form-group">
+        <label for="pid_kp_input">PID Kp</label>
+        <input id="pid_kp_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="pid_ki_input">PID Ki</label>
+        <input id="pid_ki_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="pid_kd_input">PID Kd</label>
+        <input id="pid_kd_input" type="text" class="form-control" />
+       </div>
+       <hr />
+       <h4>Other</h4>
+       <div class="form-group">
+        <label for="sensor_time_wait_input">Sensor read interval (seconds)</label>
+        <input id="sensor_time_wait_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="temperature_average_samples_input">Temperature samples per cycle</label>
+        <input id="temperature_average_samples_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="thermocouple_offset_input">Thermocouple offset</label>
+        <input id="thermocouple_offset_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="ac_freq_50hz_checkbox">AC Frequency 50Hz</label>
+        <input id="ac_freq_50hz_checkbox" type="checkbox" /> Set to 50Hz filtering
+       </div>
+       <div class="form-group">
+        <label for="emergency_shutoff_temp_input">Emergency shutoff temp</label>
+        <input id="emergency_shutoff_temp_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="automatic_restarts_checkbox">Automatic restarts</label>
+        <input id="automatic_restarts_checkbox" type="checkbox" /> Enable automatic restart after power loss
+       </div>
+       <div class="form-group">
+        <label for="pid_control_window_input">PID control window (deg)</label>
+        <input id="pid_control_window_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="throttle_below_temp_input">Throttle below temperature</label>
+        <input id="throttle_below_temp_input" type="text" class="form-control" />
+       </div>
+       <div class="form-group">
+        <label for="throttle_percent_input">Throttle percent (0-100)</label>
+        <input id="throttle_percent_input" type="text" class="form-control" />
        </div>
       </div>
       <div class="modal-footer">

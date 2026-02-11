@@ -14,6 +14,19 @@ var temp_scale_display = "C";
 var kwh_rate = 0.26;
 var currency_type = "EUR";
 var kw_elements = 9.46;
+var pid_kp = 10;
+var pid_ki = 80;
+var pid_kd = 220.83497910261562;
+var sensor_time_wait = 2;
+var simulate = true;
+var emergency_shutoff_temp = 2264;
+var automatic_restarts = true;
+var throttle_below_temp = 300;
+var throttle_percent = 20;
+var temperature_average_samples = 10;
+var ac_freq_50hz = false;
+var pid_control_window = 5;
+var thermocouple_offset = 0;
 
 var protocol = 'ws:';
 if (window.location.protocol == 'https:') {
@@ -647,17 +660,41 @@ $(document).ready(function()
             kwh_rate = x.kwh_rate;
             kw_elements = x.kw_elements || kw_elements;
             currency_type = x.currency_type;
+            // additional settings
+            pid_kp = x.pid_kp || pid_kp;
+            pid_ki = x.pid_ki || pid_ki;
+            pid_kd = x.pid_kd || pid_kd;
+            sensor_time_wait = x.sensor_time_wait || sensor_time_wait;
+            simulate = (typeof x.simulate !== 'undefined') ? x.simulate : simulate;
+            emergency_shutoff_temp = x.emergency_shutoff_temp || emergency_shutoff_temp;
+            automatic_restarts = (typeof x.automatic_restarts !== 'undefined') ? x.automatic_restarts : automatic_restarts;
+            throttle_below_temp = x.throttle_below_temp || throttle_below_temp;
+            throttle_percent = x.throttle_percent || throttle_percent;
+            temperature_average_samples = x.temperature_average_samples || temperature_average_samples;
+            ac_freq_50hz = (typeof x.ac_freq_50hz !== 'undefined') ? x.ac_freq_50hz : ac_freq_50hz;
+            pid_control_window = x.pid_control_window || pid_control_window;
+            thermocouple_offset = x.thermocouple_offset || thermocouple_offset;
 
             // populate settings modal if present
-            if (typeof $('#kwh_rate_input') !== 'undefined') {
-                $('#kwh_rate_input').val(kwh_rate);
-            }
-            if (typeof $('#kw_elements_input') !== 'undefined') {
-                $('#kw_elements_input').val(kw_elements);
-            }
-            if (typeof $('#currency_type_input') !== 'undefined') {
-                $('#currency_type_input').val(currency_type);
-            }
+            if (typeof $('#kwh_rate_input') !== 'undefined') { $('#kwh_rate_input').val(kwh_rate); }
+            if (typeof $('#kw_elements_input') !== 'undefined') { $('#kw_elements_input').val(kw_elements); }
+            if (typeof $('#currency_type_input') !== 'undefined') { $('#currency_type_input').val(currency_type); }
+            if (typeof $('#temp_scale_select') !== 'undefined') { $('#temp_scale_select').val(temp_scale); }
+            if (typeof $('#time_scale_profile_select') !== 'undefined') { $('#time_scale_profile_select').val(time_scale_profile); }
+            if (typeof $('#time_scale_slope_select') !== 'undefined') { $('#time_scale_slope_select').val(time_scale_slope); }
+            if (typeof $('#pid_kp_input') !== 'undefined') { $('#pid_kp_input').val(x.pid_kp); }
+            if (typeof $('#pid_ki_input') !== 'undefined') { $('#pid_ki_input').val(x.pid_ki); }
+            if (typeof $('#pid_kd_input') !== 'undefined') { $('#pid_kd_input').val(x.pid_kd); }
+            if (typeof $('#sensor_time_wait_input') !== 'undefined') { $('#sensor_time_wait_input').val(x.sensor_time_wait); }
+            if (typeof $('#temperature_average_samples_input') !== 'undefined') { $('#temperature_average_samples_input').val(x.temperature_average_samples); }
+            if (typeof $('#thermocouple_offset_input') !== 'undefined') { $('#thermocouple_offset_input').val(x.thermocouple_offset); }
+            if (typeof $('#ac_freq_50hz_checkbox') !== 'undefined') { $('#ac_freq_50hz_checkbox').prop('checked', !!x.ac_freq_50hz); }
+            if (typeof $('#simulate_checkbox') !== 'undefined') { $('#simulate_checkbox').prop('checked', !!x.simulate); }
+            if (typeof $('#emergency_shutoff_temp_input') !== 'undefined') { $('#emergency_shutoff_temp_input').val(x.emergency_shutoff_temp); }
+            if (typeof $('#automatic_restarts_checkbox') !== 'undefined') { $('#automatic_restarts_checkbox').prop('checked', !!x.automatic_restarts); }
+            if (typeof $('#pid_control_window_input') !== 'undefined') { $('#pid_control_window_input').val(x.pid_control_window); }
+            if (typeof $('#throttle_below_temp_input') !== 'undefined') { $('#throttle_below_temp_input').val(x.throttle_below_temp); }
+            if (typeof $('#throttle_percent_input') !== 'undefined') { $('#throttle_percent_input').val(x.throttle_percent); }
 
             if (temp_scale == "c") {temp_scale_display = "C";} else {temp_scale_display = "F";}
 
@@ -735,10 +772,42 @@ function saveSettings()
     var kr = $('#kwh_rate_input').val();
     var kw = $('#kw_elements_input').val();
     var cur = $('#currency_type_input').val();
+    var ts = $('#temp_scale_select').val();
+    var tprof = $('#time_scale_profile_select').val();
+    var tslope = $('#time_scale_slope_select').val();
+    var pk = $('#pid_kp_input').val();
+    var ki = $('#pid_ki_input').val();
+    var kd = $('#pid_kd_input').val();
+    var stw = $('#sensor_time_wait_input').val();
+    var tas = $('#temperature_average_samples_input').val();
+    var toff = $('#thermocouple_offset_input').val();
+    var ac50 = $('#ac_freq_50hz_checkbox').prop('checked');
+    var sim = $('#simulate_checkbox').prop('checked');
+    var estop = $('#emergency_shutoff_temp_input').val();
+    var arestart = $('#automatic_restarts_checkbox').prop('checked');
+    var pidwin = $('#pid_control_window_input').val();
+    var tbtemp = $('#throttle_below_temp_input').val();
+    var tbpct = $('#throttle_percent_input').val();
 
     if(kr) data.kwh_rate = parseFloat(kr);
     if(kw) data.kw_elements = parseFloat(kw);
     if(cur) data.currency_type = cur;
+    if(ts) data.temp_scale = ts;
+    if(tprof) data.time_scale_profile = tprof;
+    if(tslope) data.time_scale_slope = tslope;
+    if(pk) data.pid_kp = parseFloat(pk);
+    if(ki) data.pid_ki = parseFloat(ki);
+    if(kd) data.pid_kd = parseFloat(kd);
+    if(stw) data.sensor_time_wait = parseFloat(stw);
+    if(tas) data.temperature_average_samples = parseInt(tas);
+    if(toff) data.thermocouple_offset = parseFloat(toff);
+    data.ac_freq_50hz = !!ac50;
+    data.simulate = !!sim;
+    if(estop) data.emergency_shutoff_temp = parseFloat(estop);
+    data.automatic_restarts = !!arestart;
+    if(pidwin) data.pid_control_window = parseFloat(pidwin);
+    if(tbtemp) data.throttle_below_temp = parseFloat(tbtemp);
+    if(tbpct) data.throttle_percent = parseFloat(tbpct);
 
     var msg = { cmd: 'SET', data: data };
     var payload = JSON.stringify(msg);
