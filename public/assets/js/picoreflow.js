@@ -812,6 +812,36 @@ function saveSettings()
     var msg = { cmd: 'SET', data: data };
     var payload = JSON.stringify(msg);
 
+    // Optimistically apply settings in the UI so fields update live
+    try {
+        if (data.kwh_rate !== undefined) { kwh_rate = data.kwh_rate; $('#cost').html(currency_type + parseFloat(kwh_rate).toFixed(2)); }
+        if (data.kw_elements !== undefined) { kw_elements = data.kw_elements; }
+        if (data.currency_type !== undefined) { currency_type = data.currency_type; }
+        if (data.temp_scale !== undefined) { temp_scale = data.temp_scale; }
+        if (data.time_scale_profile !== undefined) { time_scale_profile = data.time_scale_profile; }
+        if (data.time_scale_slope !== undefined) { time_scale_slope = data.time_scale_slope; }
+        if (data.pid_kp !== undefined) { pid_kp = data.pid_kp; }
+        if (data.pid_ki !== undefined) { pid_ki = data.pid_ki; }
+        if (data.pid_kd !== undefined) { pid_kd = data.pid_kd; }
+        if (data.sensor_time_wait !== undefined) { sensor_time_wait = data.sensor_time_wait; }
+        if (data.temperature_average_samples !== undefined) { temperature_average_samples = data.temperature_average_samples; }
+        if (data.thermocouple_offset !== undefined) { thermocouple_offset = data.thermocouple_offset; }
+        if (data.ac_freq_50hz !== undefined) { ac_freq_50hz = data.ac_freq_50hz; }
+        if (data.simulate !== undefined) { simulate = data.simulate; }
+        if (data.emergency_shutoff_temp !== undefined) { emergency_shutoff_temp = data.emergency_shutoff_temp; }
+        if (data.automatic_restarts !== undefined) { automatic_restarts = data.automatic_restarts; }
+        if (data.pid_control_window !== undefined) { pid_control_window = data.pid_control_window; }
+        if (data.throttle_below_temp !== undefined) { throttle_below_temp = data.throttle_below_temp; }
+        if (data.throttle_percent !== undefined) { throttle_percent = data.throttle_percent; }
+
+        // Update temp scale display units
+        if (temp_scale == "c") {temp_scale_display = "C";} else {temp_scale_display = "F";}
+        $('#act_temp_scale').html('º'+temp_scale_display);
+        $('#target_temp_scale').html('º'+temp_scale_display);
+        $('#heat_rate_temp_scale').html('º'+temp_scale_display);
+
+    } catch (e) { /* ignore optimistic update failures */ }
+
     function notifyFail() {
         try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
         $.bootstrapGrowl('Failed to save settings', { type: 'danger', delay: 2000 });
@@ -830,12 +860,14 @@ function saveSettings()
     // disable Save button while waiting for server
     try { $('#settings_save_btn').prop('disabled', true).text('Saving...'); } catch (e) {}
 
+    // Start ack timer (we'll clear it when the server echoes the config)
+    startAckTimer();
+
     // If ws_config is open, send and wait for server ack (server echoes config)
     if (typeof ws_config !== 'undefined' && ws_config.readyState === WebSocket.OPEN) {
         try {
             ws_config.send(payload);
             try { forceHideSettingsModal(); } catch(e) {}
-            startAckTimer();
             return;
         } catch (e) {
             notifyFail();
