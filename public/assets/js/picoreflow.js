@@ -812,6 +812,14 @@ function saveSettings()
     if(tbtemp) data.throttle_below_temp = parseFloat(tbtemp);
     if(tbpct) data.throttle_percent = parseFloat(tbpct);
 
+    // Validate before sending
+    var validation = validateSettings(data);
+    if (!validation.ok) {
+        try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
+        $.bootstrapGrowl('Settings invalid: ' + validation.error, { type: 'danger', delay: 4000 });
+        return;
+    }
+
     var msg = { cmd: 'SET', data: data };
     var payload = JSON.stringify(msg);
 
@@ -982,6 +990,36 @@ function saveSettings()
     } catch (e) {
         notifyFail();
     }
+}
+
+function validateSettings(data) {
+    // Basic client-side validation; server will enforce stricter checks
+    try {
+        if (data.kwh_rate !== undefined) {
+            var kr = parseFloat(data.kwh_rate);
+            if (isNaN(kr) || kr < 0) return { ok:false, error: 'kwh_rate must be a non-negative number' };
+        }
+        if (data.kw_elements !== undefined) {
+            var kw = parseFloat(data.kw_elements);
+            if (isNaN(kw) || kw <= 0) return { ok:false, error: 'kw_elements must be a positive number' };
+        }
+        if (data.temperature_average_samples !== undefined) {
+            var tas = parseInt(data.temperature_average_samples);
+            if (isNaN(tas) || tas <= 0) return { ok:false, error: 'temperature_average_samples must be a positive integer' };
+        }
+        if (data.throttle_percent !== undefined) {
+            var tp = parseFloat(data.throttle_percent);
+            if (isNaN(tp) || tp < 0 || tp > 100) return { ok:false, error: 'throttle_percent must be between 0 and 100' };
+        }
+        if (data.pid_kp !== undefined) { if (isNaN(parseFloat(data.pid_kp))) return {ok:false, error:'pid_kp must be numeric'} }
+        if (data.pid_ki !== undefined) { if (isNaN(parseFloat(data.pid_ki))) return {ok:false, error:'pid_ki must be numeric'} }
+        if (data.pid_kd !== undefined) { if (isNaN(parseFloat(data.pid_kd))) return {ok:false, error:'pid_kd must be numeric'} }
+        if (data.pid_control_window !== undefined) { var pcw = parseFloat(data.pid_control_window); if (isNaN(pcw) || pcw <= 0) return {ok:false, error:'pid_control_window must be positive'} }
+        if (data.temp_scale !== undefined) { if (['c','f'].indexOf(String(data.temp_scale)) === -1) return {ok:false, error:'temp_scale must be "c" or "f"'} }
+        if (data.time_scale_profile !== undefined) { if (['s','m','h'].indexOf(String(data.time_scale_profile)) === -1) return {ok:false, error:'time_scale_profile must be s/m/h'} }
+        if (data.time_scale_slope !== undefined) { if (['s','m','h'].indexOf(String(data.time_scale_slope)) === -1) return {ok:false, error:'time_scale_slope must be s/m/h'} }
+    } catch (e) { return { ok:false, error: 'validation error' } }
+    return { ok:true };
 }
 
         // Control Socket ////////////////////////////////

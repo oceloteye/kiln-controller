@@ -375,9 +375,56 @@ def api_config():
         else:
             data = j
 
+        # Basic server-side validation
+        def bad(msg):
+            abort(400, msg)
+
+        def validate_field(k, v):
+            if k == 'kwh_rate':
+                try:
+                    f = float(v)
+                    if f < 0: raise ValueError()
+                except Exception:
+                    bad('kwh_rate must be a non-negative number')
+            if k == 'kw_elements':
+                try:
+                    f = float(v); 
+                    if f <= 0: raise ValueError()
+                except Exception:
+                    bad('kw_elements must be a positive number')
+            if k == 'temperature_average_samples':
+                try:
+                    n = int(v); 
+                    if n <= 0: raise ValueError()
+                except Exception:
+                    bad('temperature_average_samples must be a positive integer')
+            if k == 'throttle_percent':
+                try:
+                    f = float(v); 
+                    if f < 0 or f > 100: raise ValueError()
+                except Exception:
+                    bad('throttle_percent must be between 0 and 100')
+            if k in ('pid_kp','pid_ki','pid_kd'):
+                try:
+                    float(v)
+                except Exception:
+                    bad('%s must be numeric' % k)
+            if k == 'pid_control_window':
+                try:
+                    f = float(v); 
+                    if f <= 0: raise ValueError()
+                except Exception:
+                    bad('pid_control_window must be positive')
+            if k == 'temp_scale' and v not in ('c','f'):
+                bad('temp_scale must be "c" or "f"')
+            if k in ('time_scale_profile','time_scale_slope') and v not in ('s','m','h'):
+                bad('%s must be one of s,m,h' % k)
+
         # Apply settings (reuse same casting logic as websocket handler)
         try:
             for k, v in data.items():
+                # validate the field first
+                validate_field(k, v)
                 if hasattr(config, k):
                     cur = getattr(config, k)
                     try:
