@@ -41,6 +41,7 @@ try { window.socket_config = ws_config; } catch(e) {}
 var ws_storage = new WebSocket(host+"/storage");
 var expectingConfigAck = false;
 var configAckTimer = null;
+var lastConfigSnapshot = null;
 
 // Defensive fallback: if Select2 plugin failed to load for any reason,
 // provide a no-op implementation so the rest of the script doesn't throw
@@ -722,6 +723,8 @@ $(document).ready(function()
                 try { forceHideSettingsModal(); } catch (e) {}
                 try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
                 $.bootstrapGrowl('Settings saved', { type: 'success', delay: 2000 });
+                // clear snapshot on success
+                try { lastConfigSnapshot = null; } catch (e) {}
             }
 
             // If the settings modal is open (user may have used a different debug socket
@@ -812,8 +815,30 @@ function saveSettings()
     var msg = { cmd: 'SET', data: data };
     var payload = JSON.stringify(msg);
 
-    // Optimistically apply settings in the UI so fields update live
+    // Capture previous config for possible revert, then optimistically apply settings in the UI
     try {
+        lastConfigSnapshot = {
+            kwh_rate: kwh_rate,
+            kw_elements: kw_elements,
+            currency_type: currency_type,
+            temp_scale: temp_scale,
+            time_scale_profile: time_scale_profile,
+            time_scale_slope: time_scale_slope,
+            pid_kp: pid_kp,
+            pid_ki: pid_ki,
+            pid_kd: pid_kd,
+            sensor_time_wait: sensor_time_wait,
+            temperature_average_samples: temperature_average_samples,
+            thermocouple_offset: thermocouple_offset,
+            ac_freq_50hz: ac_freq_50hz,
+            simulate: simulate,
+            emergency_shutoff_temp: emergency_shutoff_temp,
+            automatic_restarts: automatic_restarts,
+            pid_control_window: pid_control_window,
+            throttle_below_temp: throttle_below_temp,
+            throttle_percent: throttle_percent,
+            temp_scale_display: temp_scale_display
+        };
         if (data.kwh_rate !== undefined) { kwh_rate = data.kwh_rate; $('#cost').html(currency_type + parseFloat(kwh_rate).toFixed(2)); }
         if (data.kw_elements !== undefined) { kw_elements = data.kw_elements; }
         if (data.currency_type !== undefined) { currency_type = data.currency_type; }
@@ -844,7 +869,62 @@ function saveSettings()
 
     function notifyFail() {
         try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
-        $.bootstrapGrowl('Failed to save settings', { type: 'danger', delay: 2000 });
+        $.bootstrapGrowl('Failed to save settings — reverting', { type: 'danger', delay: 3000 });
+
+        // revert optimistic UI changes if we have a snapshot
+        try {
+            if (lastConfigSnapshot) {
+                kwh_rate = lastConfigSnapshot.kwh_rate;
+                kw_elements = lastConfigSnapshot.kw_elements;
+                currency_type = lastConfigSnapshot.currency_type;
+                temp_scale = lastConfigSnapshot.temp_scale;
+                time_scale_profile = lastConfigSnapshot.time_scale_profile;
+                time_scale_slope = lastConfigSnapshot.time_scale_slope;
+                pid_kp = lastConfigSnapshot.pid_kp;
+                pid_ki = lastConfigSnapshot.pid_ki;
+                pid_kd = lastConfigSnapshot.pid_kd;
+                sensor_time_wait = lastConfigSnapshot.sensor_time_wait;
+                temperature_average_samples = lastConfigSnapshot.temperature_average_samples;
+                thermocouple_offset = lastConfigSnapshot.thermocouple_offset;
+                ac_freq_50hz = lastConfigSnapshot.ac_freq_50hz;
+                simulate = lastConfigSnapshot.simulate;
+                emergency_shutoff_temp = lastConfigSnapshot.emergency_shutoff_temp;
+                automatic_restarts = lastConfigSnapshot.automatic_restarts;
+                pid_control_window = lastConfigSnapshot.pid_control_window;
+                throttle_below_temp = lastConfigSnapshot.throttle_below_temp;
+                throttle_percent = lastConfigSnapshot.throttle_percent;
+                temp_scale_display = lastConfigSnapshot.temp_scale_display;
+
+                // update DOM fields if present
+                try { $('#kwh_rate_input').val(kwh_rate); } catch(e) {}
+                try { $('#kw_elements_input').val(kw_elements); } catch(e) {}
+                try { $('#currency_type_input').val(currency_type); } catch(e) {}
+                try { $('#temp_scale_select').val(temp_scale); } catch(e) {}
+                try { $('#time_scale_profile_select').val(time_scale_profile); } catch(e) {}
+                try { $('#time_scale_slope_select').val(time_scale_slope); } catch(e) {}
+                try { $('#pid_kp_input').val(pid_kp); } catch(e) {}
+                try { $('#pid_ki_input').val(pid_ki); } catch(e) {}
+                try { $('#pid_kd_input').val(pid_kd); } catch(e) {}
+                try { $('#sensor_time_wait_input').val(sensor_time_wait); } catch(e) {}
+                try { $('#temperature_average_samples_input').val(temperature_average_samples); } catch(e) {}
+                try { $('#thermocouple_offset_input').val(thermocouple_offset); } catch(e) {}
+                try { $('#ac_freq_50hz_checkbox').prop('checked', !!ac_freq_50hz); } catch(e) {}
+                try { $('#simulate_checkbox').prop('checked', !!simulate); } catch(e) {}
+                try { $('#emergency_shutoff_temp_input').val(emergency_shutoff_temp); } catch(e) {}
+                try { $('#automatic_restarts_checkbox').prop('checked', !!automatic_restarts); } catch(e) {}
+                try { $('#pid_control_window_input').val(pid_control_window); } catch(e) {}
+                try { $('#throttle_below_temp_input').val(throttle_below_temp); } catch(e) {}
+                try { $('#throttle_percent_input').val(throttle_percent); } catch(e) {}
+
+                // update compact UI bits
+                if (temp_scale == "c") {temp_scale_display = "C";} else {temp_scale_display = "F";}
+                try { $('#act_temp_scale').html('º'+temp_scale_display); } catch(e) {}
+                try { $('#target_temp_scale').html('º'+temp_scale_display); } catch(e) {}
+                try { $('#heat_rate_temp_scale').html('º'+temp_scale_display); } catch(e) {}
+
+                lastConfigSnapshot = null;
+            }
+        } catch (e) { /* ignore revert failures */ }
     }
 
     function startAckTimer() {
