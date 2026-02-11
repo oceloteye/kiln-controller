@@ -816,6 +816,9 @@ function saveSettings()
     var validation = validateSettings(data);
     if (!validation.ok) {
         try { $('#settings_save_btn').prop('disabled', false).text('Save'); } catch(e) {}
+        // show inline errors and focus the first invalid field
+        validateAllFields();
+        focusFirstInvalidField();
         $.bootstrapGrowl('Settings invalid: ' + validation.error, { type: 'danger', delay: 4000 });
         return;
     }
@@ -1083,6 +1086,32 @@ function validateAllFields() {
     });
     try { $('#settings_save_btn').prop('disabled', !ok); } catch(e) {}
     return ok;
+}
+
+// Focus and scroll to the first invalid field inside the Settings modal
+function focusFirstInvalidField() {
+    try {
+        var $firstGroup = $('#settingsModal .form-group.has-error').first();
+        if ($firstGroup.length === 0) return;
+        var $input = $firstGroup.find('input, select, textarea').first();
+        if ($input && $input.length) {
+            try { $input.focus(); } catch(e) {}
+        }
+        var $body = $('#settingsModal .modal-body');
+        if ($body.length && $firstGroup.length) {
+            // position relative to modal body
+            var bodyScroll = $body.scrollTop();
+            var relativeTop = $firstGroup.position().top;
+            var target = Math.max(0, bodyScroll + relativeTop - 10);
+            try { $body.animate({ scrollTop: target }, 200); } catch(e) { $body.scrollTop(target); }
+        } else if ($firstGroup.length) {
+            // fallback to page scroll
+            var off = $firstGroup.offset();
+            if (off) {
+                try { $('html,body').animate({ scrollTop: off.top - 80 }, 200); } catch(e) { window.scrollTo(0, off.top - 80); }
+            }
+        }
+    } catch (e) { /* ignore focus failures */ }
 }
 
 // Attach inline validation handlers on DOM ready
