@@ -1096,6 +1096,11 @@ function focusFirstInvalidField() {
         var $input = $firstGroup.find('input, select, textarea').first();
         if ($input && $input.length) {
             try { $input.focus(); } catch(e) {}
+            // add a temporary visual highlight
+            try {
+                $input.addClass('field-highlight');
+                setTimeout(function() { try { $input.removeClass('field-highlight'); } catch(e) {} }, 900);
+            } catch (e) { }
         }
         var $body = $('#settingsModal .modal-body');
         if ($body.length && $firstGroup.length) {

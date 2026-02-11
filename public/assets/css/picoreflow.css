@@ -355,6 +355,19 @@ body {
     margin-bottom: 0;
 }
 
+/* Highlight animation for invalid fields */
+.field-highlight {
+    animation: pcf-field-highlight 900ms ease-out;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+@keyframes pcf-field-highlight {
+    0% { box-shadow: 0 0 0 rgba(217,83,79,0); border-color: #d9534f; }
+    25% { box-shadow: 0 0 8px rgba(217,83,79,0.85); }
+    50% { box-shadow: 0 0 12px rgba(217,83,79,0.9); }
+    100% { box-shadow: 0 0 0 rgba(217,83,79,0); }
+}
+
 .select2-container .select2-choice {
     height: 34px;
     margin-top: 1px;
