@@ -74,6 +74,17 @@
         <button id="btn_exit" type="button" class="btn btn-default" onclick="leaveEditMode()"><span class="glyphicon glyphicon-remove"></span></button>
       </span>
      </div>
+     <div style="margin-top:8px">
+       <button class="btn btn-default" type="button" onclick="triggerImport()">Import</button>
+       <div class="btn-group">
+         <button class="btn btn-default" type="button" onclick="exportProfileToJSON()">Export JSON</button>
+         <button class="btn btn-default" type="button" onclick="exportProfileToCSV()">Export CSV</button>
+       </div>
+       <label style="margin-left:8px; margin-right:6px;">
+         <input id="autosave_after_import" type="checkbox" /> Auto-save after import
+       </label>
+       <input id="importFile" type="file" accept=".json,.csv" style="display:none" />
+     </div>
      <div class="btn-group btn-group-sm" style="margin-top: 10px">
       <button id="btn_newPoint" type="button" class="btn btn-default" onclick="newPoint()"><span class="glyphicon glyphicon-plus"></span></button>
       <button id="btn_delPoint" type="button" class="btn btn-default" onclick="delPoint()"><span class="glyphicon glyphicon-minus"></span></button>

@@ -1,0 +1,11 @@
+{
+  "name": "kiln-controller-tests",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "scripts": {
+    "test": "playwright test"
+  }
+}
