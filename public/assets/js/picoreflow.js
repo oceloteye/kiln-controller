@@ -597,19 +597,18 @@ $(document).ready(function()
             ws_config.send('GET');
         };
 
-        ws_config.onmessage = function(e)
-        {
-            console.log (e.data);
-            x = JSON.parse(e.data);
-            temp_scale = x.temp_scale;
-            time_scale_slope = x.time_scale_slope;
-            time_scale_profile = x.time_scale_profile;
-            kwh_rate = x.kwh_rate;
-            currency_type = x.currency_type;
+        function applySettings(cfg) {
+            if (!cfg) return;
+            temp_scale = cfg.temp_scale || temp_scale;
+            time_scale_slope = cfg.time_scale_slope || time_scale_slope;
+            time_scale_profile = cfg.time_scale_profile || time_scale_profile;
+            if (typeof cfg.kwh_rate !== 'undefined') {
+                var parsed = parseFloat(cfg.kwh_rate);
+                if (!isNaN(parsed)) kwh_rate = parsed;
+            }
+            currency_type = cfg.currency_type || currency_type;
 
-            if (temp_scale == "c") {temp_scale_display = "C";} else {temp_scale_display = "F";}
-
-
+            temp_scale_display = (temp_scale == "c") ? "C" : "F";
             $('#act_temp_scale').html('º'+temp_scale_display);
             $('#target_temp_scale').html('º'+temp_scale_display);
             $('#heat_rate_temp_scale').html('º'+temp_scale_display);
@@ -626,6 +625,30 @@ $(document).ready(function()
                     break;
             }
 
+            // Refresh UI that depends on settings
+            try { updateProfileTable(); } catch (e) { }
+            try { updateProfile(selected_profile); } catch (e) { }
+        }
+
+        ws_config.onmessage = function(e)
+        {
+            console.log(e.data);
+            x = JSON.parse(e.data);
+
+            // Server SET response format: { status: 'OK'|'ERROR', settings: { ... } }
+            if (x && x.status) {
+                if (x.status === 'OK' && x.settings) {
+                    applySettings(x.settings);
+                    $.bootstrapGrowl('Settings saved', {type:'success', delay:2000, offset:{from:'top',amount:250}});
+                }
+                else {
+                    $.bootstrapGrowl('Failed to save settings', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+                }
+                return;
+            }
+
+            // Otherwise, server sends the full config JSON
+            applySettings(x);
         }
 
         // Settings modal wiring with validation
