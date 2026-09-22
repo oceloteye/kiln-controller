@@ -628,13 +628,30 @@ $(document).ready(function()
 
         }
 
-        // Settings modal wiring
+        // Settings modal wiring with validation
         $('#saveSettingsBtn').on('click', function(){
             var newScale = $('#setting_temp_scale').val();
-            var newKwh = parseFloat($('#setting_kwh_rate').val());
+            var newKwhRaw = $('#setting_kwh_rate').val();
             var newCurrency = $('#setting_currency').val();
+
+            // Validation
+            var newKwh = parseFloat(newKwhRaw);
+            if (isNaN(newKwh) || newKwh < 0) {
+                $.bootstrapGrowl('Please enter a valid kWh rate', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+                return;
+            }
+            if (!newCurrency || newCurrency.trim().length === 0) {
+                $.bootstrapGrowl('Please enter a currency symbol', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+                return;
+            }
+
             var payload = { cmd: 'SET', settings: { temp_scale: newScale, kwh_rate: newKwh, currency_type: newCurrency } };
-            ws_config.send(JSON.stringify(payload));
+            try {
+                ws_config.send(JSON.stringify(payload));
+                $.bootstrapGrowl('Saving settings...', {type:'info', delay:1000, offset:{from:'top',amount:250}});
+            } catch(err) {
+                $.bootstrapGrowl('Unable to send settings to server', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+            }
             $('#settingsModal').modal('hide');
         });
 
