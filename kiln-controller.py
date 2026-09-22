@@ -24,6 +24,7 @@ log.info("Starting kiln controller")
 script_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, script_dir + '/lib/')
 profile_path = config.kiln_profiles_directory
+SETTINGS_FILE = os.path.join(script_dir, 'settings.json')
 
 from oven import SimulatedOven, RealOven, Profile
 from ovenWatcher import OvenWatcher
@@ -236,6 +237,19 @@ def handle_config():
     while True:
         try:
             message = wsock.receive()
+            # allow client to send updated settings
+            try:
+                msg = json.loads(message)
+                if isinstance(msg, dict) and msg.get('cmd') == 'SET':
+                    overrides = msg.get('settings', {})
+                    if update_config(overrides):
+                        wsock.send(json.dumps({ 'status': 'OK', 'settings': json.loads(get_config()) }))
+                    else:
+                        wsock.send(json.dumps({ 'status': 'ERROR' }))
+                    time.sleep(0.2)
+                    continue
+            except Exception:
+                pass
             wsock.send(get_config())
         except WebSocketError:
             break
@@ -334,11 +348,45 @@ def delete_profile(profile):
     return True
 
 def get_config():
-    return json.dumps({"temp_scale": config.temp_scale,
+    # Base config from module
+    cfg = {"temp_scale": config.temp_scale,
         "time_scale_slope": config.time_scale_slope,
         "time_scale_profile": config.time_scale_profile,
         "kwh_rate": config.kwh_rate,
-        "currency_type": config.currency_type})    
+        "currency_type": config.currency_type}
+    # apply overrides from SETTINGS_FILE if present
+    try:
+        if os.path.exists(SETTINGS_FILE):
+            with open(SETTINGS_FILE, 'r') as sf:
+                overrides = json.load(sf)
+            for k,v in overrides.items():
+                cfg[k] = v
+    except Exception as e:
+        log.error('Failed loading settings overrides: %s' % e)
+    return json.dumps(cfg)
+
+def update_config(overrides):
+    """Write overrides to SETTINGS_FILE and update in-memory config module."""
+    try:
+        # write overrides to JSON file
+        with open(SETTINGS_FILE, 'w') as sf:
+            json.dump(overrides, sf)
+
+        # apply to in-memory config for immediate effect
+        if 'temp_scale' in overrides:
+            config.temp_scale = overrides['temp_scale']
+        if 'kwh_rate' in overrides:
+            try:
+                config.kwh_rate = float(overrides['kwh_rate'])
+            except:
+                pass
+        if 'currency_type' in overrides:
+            config.currency_type = overrides['currency_type']
+
+        return True
+    except Exception as e:
+        log.error('Failed updating settings: %s' % e)
+        return False
 
 def main():
     ip = "0.0.0.0"

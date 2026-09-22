@@ -628,6 +628,23 @@ $(document).ready(function()
 
         }
 
+        // Settings modal wiring
+        $('#saveSettingsBtn').on('click', function(){
+            var newScale = $('#setting_temp_scale').val();
+            var newKwh = parseFloat($('#setting_kwh_rate').val());
+            var newCurrency = $('#setting_currency').val();
+            var payload = { cmd: 'SET', settings: { temp_scale: newScale, kwh_rate: newKwh, currency_type: newCurrency } };
+            ws_config.send(JSON.stringify(payload));
+            $('#settingsModal').modal('hide');
+        });
+
+        // Populate settings modal when opened
+        $('#settingsModal').on('show.bs.modal', function(){
+            $('#setting_temp_scale').val(temp_scale || 'c');
+            $('#setting_kwh_rate').val(kwh_rate || 0.26);
+            $('#setting_currency').val(currency_type || 'EUR');
+        });
+
         // Control Socket ////////////////////////////////
 
         ws_control.onopen = function()
