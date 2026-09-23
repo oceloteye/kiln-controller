@@ -24,6 +24,18 @@
 </head>
 <body>
 
+<!-- Top header -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">RPI Kiln Controller</a>
+    </div>
+    <div class="nav navbar-nav navbar-right">
+      <button id="btn_settings" class="btn btn-default navbar-btn" type="button" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog"></span> Settings</button>
+    </div>
+  </div>
+</nav>
+
  <div class="container">
   <div id="status">
    <div class="ds-title-panel">
@@ -88,7 +100,7 @@
      <button id="btn_edit" type="button" class="btn btn-default" onclick="enterEditMode()"><span class="glyphicon glyphicon-edit"></span></button>
      <button id="btn_new" type="button" class="btn btn-default" onclick="enterNewMode(selected_profile)"><span class="glyphicon glyphicon-plus"></span></button>
     </div>
-   <div id="btn_controls" class="pull-right" style="margin-top: 3px">
+  <div id="btn_controls" class="pull-right" style="margin-top: 3px">
     <div id="nav_start" class="btn-group" style="display:none">
      <button type="button" class="btn btn-default" style="visibility: hidden;"  onclick="runTaskSimulation();">Simulate</button>
      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#jobSummaryModal"><span class="glyphicon glyphicon-play"></span> Start</button>
@@ -104,9 +116,7 @@
         <button id="btn_exit" type="button" class="btn btn-default" onclick="leaveEditMode()"><span class="glyphicon glyphicon-remove"></span></button>
       </span>
      </div>
-     <div style="margin-top:8px">
-       <button class="btn btn-default" type="button" data-toggle="modal" data-target="#settingsModal">Settings</button>
-     </div>
+     
      <div style="margin-top:8px">
        <button class="btn btn-default" type="button" onclick="triggerImport()">Import</button>
        <div class="btn-group">

@@ -5,6 +5,7 @@ import os
 import sys
 import logging
 import json
+from collections import deque
 
 import bottle
 import gevent
@@ -20,6 +21,23 @@ import config
 logging.basicConfig(level=config.log_level, format=config.log_format)
 log = logging.getLogger("kiln-controller")
 log.info("Starting kiln controller")
+
+# In-memory recent log store for debugging endpoints
+recent_logs = deque(maxlen=1000)
+
+
+class InMemoryLogHandler(logging.Handler):
+    def emit(self, record):
+        try:
+            recent_logs.append(self.format(record))
+        except Exception:
+            pass
+
+# Attach in-memory handler
+mem_handler = InMemoryLogHandler()
+mem_handler.setLevel(config.log_level)
+mem_handler.setFormatter(logging.Formatter(config.log_format))
+logging.getLogger().addHandler(mem_handler)
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, script_dir + '/lib/')
@@ -237,14 +255,18 @@ def handle_config():
     while True:
         try:
             message = wsock.receive()
+            log.info("/config websocket received raw message: %r" % (message,))
             # allow client to send updated settings
             try:
                 msg = json.loads(message)
                 if isinstance(msg, dict) and msg.get('cmd') == 'SET':
                     overrides = msg.get('settings', {})
+                    log.info('/config SET received overrides: %s' % json.dumps(overrides))
                     if update_config(overrides):
+                        log.info('Wrote settings overrides successfully')
                         wsock.send(json.dumps({ 'status': 'OK', 'settings': json.loads(get_config()) }))
                     else:
+                        log.error('Failed to write settings overrides')
                         wsock.send(json.dumps({ 'status': 'ERROR' }))
                     time.sleep(0.2)
                     continue
@@ -371,6 +393,7 @@ def update_config(overrides):
         # write overrides to JSON file
         with open(SETTINGS_FILE, 'w') as sf:
             json.dump(overrides, sf)
+        log.info('Wrote settings overrides to %s: %s' % (SETTINGS_FILE, json.dumps(overrides)))
 
         # apply to in-memory config for immediate effect
         if 'temp_scale' in overrides:
@@ -392,6 +415,15 @@ def main():
     ip = "0.0.0.0"
     port = config.listening_port
     log.info("listening on %s:%d" % (ip, port))
+
+
+@app.route('/debug/logs')
+def debug_logs():
+    # Return the recent in-memory log lines
+    try:
+        return bottle.HTTPResponse(status=200, body=json.dumps(list(recent_logs)))
+    except Exception as e:
+        return bottle.HTTPResponse(status=500, body=str(e))
 
     server = WSGIServer((ip, port), app,
                         handler_class=WebSocketHandler)

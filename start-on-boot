@@ -1,3 +1,24 @@
 #!/bin/bash
-sudo cp /home/pi/kiln-controller/lib/init/kiln-controller.service /etc/systemd/system/
-sudo systemctl enable kiln-controller
+set -euo pipefail
+
+# Resolve the directory this script lives in (repository root)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+SERVICE_SRC="$SCRIPT_DIR/lib/init/kiln-controller.service"
+
+if [ ! -f "$SERVICE_SRC" ]; then
+	echo "Service file not found at $SERVICE_SRC" >&2
+	exit 1
+fi
+
+if command -v systemctl >/dev/null 2>&1; then
+	TMPFILE=$(mktemp)
+	# Replace {{INSTALL_DIR}} placeholder (preferred) and keep a fallback for older files
+	sed "s|{{INSTALL_DIR}}|$SCRIPT_DIR|g; s|/home/pi/kiln-controller|$SCRIPT_DIR|g" "$SERVICE_SRC" > "$TMPFILE"
+	sudo mv "$TMPFILE" /etc/systemd/system/kiln-controller.service
+	sudo systemctl daemon-reload
+	sudo systemctl enable kiln-controller
+	echo "Enabled systemd service: kiln-controller (installed from $SERVICE_SRC)"
+else
+	echo "systemctl not available. To run on reboot, consider adding an @reboot crontab entry:" >&2
+	echo "@reboot $SCRIPT_DIR/kiln-controller.py" >&2
+fi

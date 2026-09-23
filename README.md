@@ -129,7 +129,31 @@ There is a state view that can help with tuning. It shows the P,I, and D paramet
 ### Autostart Server onBoot
 If you want the server to autostart on boot, run the following command:
 
-    $ /home/pi/kiln-controller/start-on-boot
+    $ ./start-on-boot
+
+The `start-on-boot` script will install the systemd service from
+`lib/init/kiln-controller.service`. The service file uses a `{{INSTALL_DIR}}`
+placeholder which the script replaces with the repository path when installing.
+
+If `systemctl` is available the script will:
+
+- copy the substituted service file to `/etc/systemd/system/kiln-controller.service`
+- reload the systemd daemon
+- enable the `kiln-controller` service so it starts on boot
+
+If `systemctl` isn't available (non-systemd systems), the script prints a
+suggested crontab line you can add to run the controller at reboot:
+
+```cron
+@reboot /path/to/kiln-controller/kiln-controller.py
+```
+
+Run `start-on-boot` from the repository root. Example:
+
+```bash
+$ cd ~/kiln-controller
+$ ./start-on-boot
+```
 
 ### Client Access
 

@@ -595,6 +595,8 @@ $(document).ready(function()
         ws_config.onopen = function()
         {
             ws_config.send('GET');
+            console.log('/config socket opened');
+            try { window.__configSocketOpen = true; } catch(e) {}
         };
 
         function applySettings(cfg) {
@@ -669,11 +671,44 @@ $(document).ready(function()
             }
 
             var payload = { cmd: 'SET', settings: { temp_scale: newScale, kwh_rate: newKwh, currency_type: newCurrency } };
-            try {
-                ws_config.send(JSON.stringify(payload));
-                $.bootstrapGrowl('Saving settings...', {type:'info', delay:1000, offset:{from:'top',amount:250}});
-            } catch(err) {
-                $.bootstrapGrowl('Unable to send settings to server', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+            console.log('SETTING_SAVE_CLICKED', payload);
+            console.log('Sending SET payload to /config:', payload);
+            if (ws_config.readyState !== WebSocket.OPEN) {
+                console.error('/config socket not open (readyState=' + ws_config.readyState + ')');
+            }
+            // if socket not open, queue the payload and retry until open or timeout
+            function sendWithRetry(payload, attemptsLeft) {
+                console.log('SETTING_SEND_ATTEMPT', {attemptsLeft: attemptsLeft, payload: payload});
+                try {
+                    if (ws_config.readyState === WebSocket.OPEN) {
+                        ws_config.send(JSON.stringify(payload));
+                        console.log('SETTING_SENT', payload);
+                        console.log('Sent payload after retry:', payload);
+                        $.bootstrapGrowl('Saving settings...', {type:'info', delay:1000, offset:{from:'top',amount:250}});
+                        return true;
+                    }
+                } catch(e) {
+                    console.error('Exception while sending /config payload', e);
+                }
+                if (attemptsLeft <= 0) {
+                    console.error('Failed to send /config SET payload; socket never opened');
+                    $.bootstrapGrowl('Unable to send settings to server', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+                    return false;
+                }
+                setTimeout(function(){ sendWithRetry(payload, attemptsLeft-1); }, 200);
+                return null;
+            }
+            // if not open, use retry helper
+            if (ws_config.readyState !== WebSocket.OPEN) {
+                sendWithRetry(payload, 10);
+            } else {
+                try {
+                    ws_config.send(JSON.stringify(payload));
+                    $.bootstrapGrowl('Saving settings...', {type:'info', delay:1000, offset:{from:'top',amount:250}});
+                } catch(err) {
+                    console.error('Failed to send SET payload', err);
+                    $.bootstrapGrowl('Unable to send settings to server', {type:'error', delay:3000, offset:{from:'top',amount:250}});
+                }
             }
             $('#settingsModal').modal('hide');
         });
